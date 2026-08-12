@@ -28,6 +28,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
   --color-destructive: var(--destructive);
@@ -41,46 +43,47 @@
 :root {
   --radius: 0.75rem;
 
-  /* Base: dark landing page */
-  --background: oklch(0.14 0.012 40);
-  --foreground: oklch(0.98 0.005 80);
-  --surface: oklch(0.18 0.018 40);
-  --surface-foreground: oklch(0.98 0.005 80);
-  --card: oklch(0.2 0.02 40);
-  --card-foreground: oklch(0.97 0.005 80);
-  --popover: oklch(0.2 0.02 40);
-  --popover-foreground: oklch(0.97 0.005 80);
+  /* Base: off-white premium wellness palette */
+  --background: oklch(0.982 0.006 165); /* #F7FAF8 */
+  --foreground: oklch(0.245 0.014 165); /* #17211D */
+  --surface: oklch(1 0 0); /* #FFFFFF */
+  --surface-foreground: oklch(0.245 0.014 165);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.245 0.014 165);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.245 0.014 165);
 
-  --primary: oklch(0.68 0.2 46);
-  --primary-foreground: oklch(0.99 0.005 80);
-  --primary-glow: oklch(0.75 0.18 62);
+  --primary: oklch(0.585 0.117 165); /* #159A6C */
+  --primary-foreground: oklch(1 0 0);
+  --primary-glow: oklch(0.66 0.115 164);
+  --primary-deep: oklch(0.443 0.093 163); /* #08704D */
 
-  --secondary: oklch(0.24 0.02 40);
-  --secondary-foreground: oklch(0.97 0.005 80);
+  --teal: oklch(0.325 0.041 208); /* #123F46 */
+  --teal-foreground: oklch(1 0 0);
 
-  --muted: oklch(0.24 0.02 40);
-  --muted-foreground: oklch(0.72 0.015 70);
+  --secondary: oklch(0.96 0.009 165);
+  --secondary-foreground: oklch(0.325 0.041 208);
 
-  --accent: oklch(0.68 0.2 46);
-  --accent-foreground: oklch(0.99 0.005 80);
+  --muted: oklch(0.96 0.009 165);
+  --muted-foreground: oklch(0.5 0.015 190);
 
-  --success: oklch(0.62 0.17 148);
-  --success-foreground: oklch(0.99 0.005 80);
+  --accent: oklch(0.755 0.115 84); /* #D6A83A */
+  --accent-foreground: oklch(0.245 0.014 165);
 
-  --destructive: oklch(0.55 0.21 27);
-  --destructive-foreground: oklch(0.99 0.005 80);
+  --success: oklch(0.585 0.117 165);
+  --success-foreground: oklch(1 0 0);
 
-  --border: oklch(0.3 0.02 45);
-  --input: oklch(0.3 0.02 45);
-  --ring: oklch(0.68 0.2 46);
+  --destructive: oklch(0.55 0.19 27);
+  --destructive-foreground: oklch(1 0 0);
 
-  --light-bg: oklch(0.99 0.004 90);
-  --light-fg: oklch(0.2 0.02 40);
+  --border: oklch(0.91 0.01 165);
+  --input: oklch(0.91 0.01 165);
+  --ring: oklch(0.585 0.117 165);
 
-  --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
-  --gradient-offer: linear-gradient(160deg, oklch(0.42 0.16 30), oklch(0.3 0.12 28));
-  --shadow-glow: 0 18px 45px -18px oklch(0.68 0.2 46 / 0.65);
-  --shadow-card: 0 12px 30px -18px oklch(0 0 0 / 0.8);
+  --gradient-primary: linear-gradient(135deg, var(--primary-deep), var(--primary));
+  --gradient-offer: linear-gradient(160deg, oklch(0.4 0.085 163), oklch(0.3 0.06 180));
+  --shadow-glow: 0 18px 40px -20px oklch(0.443 0.093 163 / 0.55);
+  --shadow-card: 0 10px 28px -20px oklch(0.325 0.041 208 / 0.35);
 }
 
 @layer base {
@@ -102,10 +105,40 @@
   }
 }
 
-/* Light sections (bônus / depoimentos / garantia / FAQ) */
+/* Clean white sections */
 @utility section-light {
-  background-color: var(--light-bg);
-  color: var(--light-fg);
+  background-color: var(--surface);
+  color: var(--foreground);
+}
+
+/* Deep petrol-blue sections: trust / institutional */
+@utility section-deep {
+  --foreground: oklch(1 0 0);
+  --surface: oklch(1 0 0 / 0.07);
+  --surface-foreground: oklch(1 0 0);
+  --card: oklch(1 0 0 / 0.07);
+  --card-foreground: oklch(1 0 0);
+  --muted-foreground: oklch(0.86 0.015 190);
+  --border: oklch(1 0 0 / 0.16);
+  --primary: oklch(0.68 0.12 164);
+  --primary-glow: oklch(0.74 0.11 164);
+  background-color: oklch(0.325 0.041 208);
+  color: oklch(1 0 0);
+}
+
+/* Deep green sections: journey highlights */
+@utility section-emerald {
+  --foreground: oklch(1 0 0);
+  --surface: oklch(1 0 0 / 0.08);
+  --surface-foreground: oklch(1 0 0);
+  --card: oklch(1 0 0 / 0.08);
+  --card-foreground: oklch(1 0 0);
+  --muted-foreground: oklch(0.9 0.02 165);
+  --border: oklch(1 0 0 / 0.18);
+  --primary: oklch(0.8 0.09 165);
+  --primary-glow: oklch(0.86 0.08 165);
+  background-color: oklch(0.443 0.093 163);
+  color: oklch(1 0 0);
 }
 
 @utility text-gradient-primary {
@@ -116,7 +149,7 @@
 }
 
 @utility bg-gradient-primary {
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, var(--primary-deep), var(--primary));
 }
 
 @utility bg-gradient-offer {
@@ -150,7 +183,7 @@
   color: var(--muted-foreground);
   background-image: repeating-linear-gradient(
     135deg,
-    oklch(0.5 0.02 60 / 0.12) 0 10px,
+    oklch(0.585 0.117 165 / 0.1) 0 10px,
     transparent 10px 20px
   );
   border: 1px dashed var(--border);
@@ -162,12 +195,12 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 }
 
 @utility animate-pulse-soft {
-  animation: pulse-soft 2.2s ease-in-out infinite;
+  animation: pulse-soft 2.4s ease-in-out infinite;
 }
 
 @keyframes fade-up {
