@@ -10,10 +10,10 @@ const BENEFITS = [
 
 export function Hero({ onCta }: { onCta: () => void }) {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-background pb-12 pt-6 sm:pb-16">
+    <section className="section-deep relative overflow-hidden pb-12 pt-6 sm:pb-16">
       <div className="container-page">
         <div className="flex justify-center">
-          <span className="rounded-full bg-gradient-primary px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
+          <span className="rounded-full bg-gradient-cta px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
             Oferta Especial - 93% de Desconto
           </span>
         </div>
@@ -23,7 +23,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <h1 className="text-3xl font-extrabold leading-tight sm:text-4xl lg:text-[2.75rem]">
               +100 Planilhas de Treinos Ajustado para o seu Biotipo
             </h1>
-            <h2 className="mx-auto mt-4 max-w-xl text-base font-bold text-primary sm:text-lg lg:mx-0">
+            <h2 className="mx-auto mt-4 max-w-xl text-base font-bold text-accent sm:text-lg lg:mx-0">
               Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios
             </h2>
 
@@ -46,7 +46,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <button
               type="button"
               onClick={onCta}
-              className="mt-7 flex w-full max-w-md items-center justify-center gap-3 rounded-xl bg-gradient-primary px-6 py-4 shadow-glow transition-transform duration-200 hover:scale-[1.02] lg:mx-0"
+              className="mt-7 flex w-full max-w-md items-center justify-center gap-3 rounded-xl bg-gradient-cta px-6 py-4 shadow-glow transition-transform duration-200 hover:scale-[1.02] lg:mx-0"
             >
               <span className="text-xs font-semibold text-primary-foreground/85 line-through sm:text-sm">
                 De: R$ 87,00
@@ -69,11 +69,11 @@ export function Hero({ onCta }: { onCta: () => void }) {
 
           <div className="relative mx-auto w-full max-w-sm">
             <Placeholder label="IMAGEM HERO" className="aspect-[4/3] w-full rounded-2xl" />
-            <span className="absolute -right-2 -top-3 rounded-full bg-success px-3 py-1 text-[10px] font-extrabold uppercase text-success-foreground shadow-card">
+            <span className="absolute -right-2 -top-3 rounded-full bg-accent px-3 py-1 text-[10px] font-extrabold uppercase text-accent-foreground shadow-card">
               93% OFF
             </span>
             <div className="mt-3 rounded-xl border border-border bg-surface px-4 py-3 text-center">
-              <p className="text-xs font-extrabold uppercase tracking-wide text-primary">
+              <p className="text-xs font-extrabold uppercase tracking-wide text-accent">
                 Somente Hoje!
               </p>
               <p className="mt-1 text-xs text-muted-foreground">São +100 Planilhas de Treinos</p>

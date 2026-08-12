@@ -18,7 +18,7 @@ const STEPS = [
 
 export function Steps() {
   return (
-    <section className="bg-background py-14 sm:py-20">
+    <section className="section-emerald py-14 sm:py-20">
       <div className="container-page text-center">
         <h2 className="text-2xl font-extrabold sm:text-3xl">Como Tenho Acesso ao Material?</h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground">

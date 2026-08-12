@@ -5,10 +5,10 @@ const ITEMS = [1, 2, 3, 4, 5, 6];
 
 export function Testimonials() {
   return (
-    <section className="section-light py-14 sm:py-20">
+    <section className="bg-background py-14 sm:py-20">
       <div className="container-page text-center">
         <p className="text-[11px] font-bold uppercase tracking-[0.25em] opacity-60">Depoimentos</p>
-        <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">
+        <h2 className="mt-3 text-2xl font-extrabold text-teal sm:text-3xl">
           Quem Fez, <span className="text-primary">Se SUPEROU!</span>
         </h2>
 
@@ -19,7 +19,7 @@ export function Testimonials() {
               className="rounded-2xl border border-border bg-surface p-5 shadow-card transition-transform duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center justify-between">
-                <div className="flex gap-0.5 text-primary">
+                <div className="flex gap-0.5 text-accent">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <Star key={s} className="h-3.5 w-3.5 fill-current" />
                   ))}
