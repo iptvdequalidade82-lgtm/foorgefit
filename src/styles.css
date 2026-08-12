@@ -37,7 +37,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -102,8 +103,17 @@
 
   h1,
   h2,
-  h3 {
-    letter-spacing: -0.02em;
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.028em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 }
 
@@ -227,4 +237,119 @@
 
 @utility animate-fade-up {
   animation: fade-up 0.6s ease-out both;
+}
+
+
+/* ---- Editorial type scale ---- */
+@utility display-1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.15rem, 1.35rem + 3.4vw, 3.75rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+@utility display-2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.65rem, 1.15rem + 1.9vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+@utility display-3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+@utility lead {
+  font-size: clamp(0.98rem, 0.92rem + 0.3vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--muted-foreground);
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility price-xl {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 1.9rem + 2.4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Rhythm ---- */
+@utility section-pad {
+  padding-block: clamp(4.5rem, 3rem + 6vw, 8rem);
+}
+
+@utility section-pad-sm {
+  padding-block: clamp(3.25rem, 2.4rem + 3.4vw, 5rem);
+}
+
+@utility stack-head {
+  margin-inline: auto;
+  max-width: 46rem;
+}
+
+/* ---- Premium card ---- */
+@utility card-premium {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow:
+    0 1px 2px oklch(0.325 0.041 208 / 0.04),
+    0 12px 28px -22px oklch(0.325 0.041 208 / 0.35);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease;
+  will-change: transform;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--primary) 38%, var(--border));
+    box-shadow:
+      0 1px 2px oklch(0.325 0.041 208 / 0.05),
+      0 26px 50px -30px oklch(0.325 0.041 208 / 0.5);
+  }
+}
+
+@utility hairline {
+  border-top: 1px solid color-mix(in oklab, var(--border) 100%, transparent);
+}
+
+/* ---- Reveal on scroll ---- */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@utility is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-pulse-soft {
+    animation: none;
+  }
 }
