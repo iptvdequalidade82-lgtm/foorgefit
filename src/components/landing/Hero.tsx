@@ -13,7 +13,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
     <section className="section-deep relative overflow-hidden pb-12 pt-6 sm:pb-16">
       <div className="container-page">
         <div className="flex justify-center">
-          <span className="rounded-full bg-gradient-primary px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
+          <span className="rounded-full bg-gradient-cta px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
             Oferta Especial - 93% de Desconto
           </span>
         </div>
@@ -46,7 +46,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <button
               type="button"
               onClick={onCta}
-              className="mt-7 flex w-full max-w-md items-center justify-center gap-3 rounded-xl bg-gradient-primary px-6 py-4 shadow-glow transition-transform duration-200 hover:scale-[1.02] lg:mx-0"
+              className="mt-7 flex w-full max-w-md items-center justify-center gap-3 rounded-xl bg-gradient-cta px-6 py-4 shadow-glow transition-transform duration-200 hover:scale-[1.02] lg:mx-0"
             >
               <span className="text-xs font-semibold text-primary-foreground/85 line-through sm:text-sm">
                 De: R$ 87,00

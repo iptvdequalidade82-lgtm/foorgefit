@@ -80,6 +80,8 @@
   --input: oklch(0.91 0.01 165);
   --ring: oklch(0.585 0.117 165);
 
+  --cta: oklch(0.585 0.117 165); /* #159A6C */
+  --cta-hover: oklch(0.443 0.093 163); /* #08704D */
   --gradient-primary: linear-gradient(135deg, var(--primary-deep), var(--primary));
   --gradient-offer: linear-gradient(160deg, oklch(0.4 0.085 163), oklch(0.3 0.06 180));
   --shadow-glow: 0 18px 40px -20px oklch(0.443 0.093 163 / 0.55);
@@ -150,6 +152,15 @@
 
 @utility bg-gradient-primary {
   background: linear-gradient(135deg, var(--primary-deep), var(--primary));
+}
+
+@utility bg-gradient-cta {
+  background: linear-gradient(135deg, oklch(0.443 0.093 163), oklch(0.585 0.117 165));
+}
+
+@utility bg-cta {
+  background-color: oklch(0.585 0.117 165);
+  color: #fff;
 }
 
 @utility bg-gradient-offer {

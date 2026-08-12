@@ -8,7 +8,7 @@ const BONUSES = ["250 Receitas Low Carb", "128 Receitas Anabólicas", "50 Receit
 export function Offer() {
   return (
     <section id="oferta" className="section-deep scroll-mt-4">
-      <div className="bg-gradient-primary py-3 text-center">
+      <div className="bg-gradient-cta py-3 text-center">
         <p className="text-[11px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-sm">
           ⚡ Oferta Especial Por Tempo Limitado! ⚡
         </p>
@@ -27,14 +27,14 @@ export function Offer() {
         </p>
 
         <div className="mx-auto mt-10 max-w-md rounded-2xl bg-gradient-offer p-6 shadow-glow sm:p-8">
-          <span className="inline-block rounded-full bg-primary/25 px-4 py-1 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground">
+          <span className="inline-block rounded-full bg-white/15/25 px-4 py-1 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground">
             ⭐ Super Oferta ⭐
           </span>
           <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide sm:text-base">
             🏋 Pacote Completo
           </h3>
 
-          <div className="mt-5 rounded-xl bg-gradient-primary px-5 py-6 shadow-card">
+          <div className="mt-5 rounded-xl bg-gradient-cta px-5 py-6 shadow-card">
             <p className="flex items-center justify-center gap-2 text-xs font-semibold text-primary-foreground/85">
               <span className="line-through">R$ 87,00</span>
               <span className="rounded bg-background/25 px-1.5 py-0.5 text-[10px] font-extrabold">
@@ -53,7 +53,7 @@ export function Offer() {
           <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left">
             {BONUSES.map((b) => (
               <li key={b} className="flex items-start gap-2 text-xs sm:text-sm">
-                <span className="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-primary">
+                <span className="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-cta">
                   <Check className="h-2.5 w-2.5 text-primary-foreground" />
                 </span>
                 <span className="min-w-0">{b}</span>
