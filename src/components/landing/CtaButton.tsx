@@ -10,10 +10,12 @@ type Props = {
 
 export function CtaButton({ children, className, variant = "primary", href, onClick }: Props) {
   const base =
-    "inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4 text-center text-sm font-extrabold uppercase tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base";
+    "group inline-flex w-full items-center justify-center gap-2 rounded-xl px-8 py-4 text-center font-sans text-[0.95rem] font-bold leading-tight tracking-[0.01em] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base";
   const variants = {
-    primary: "bg-cta text-white shadow-glow hover:bg-[var(--cta-hover)]",
-    success: "bg-cta text-white shadow-glow hover:bg-[var(--cta-hover)]",
+    primary:
+      "bg-cta text-white shadow-[0_14px_30px_-16px_oklch(0.443_0.093_163/0.85)] hover:bg-[var(--cta-hover)] hover:shadow-[0_20px_40px_-18px_oklch(0.443_0.093_163/0.9)]",
+    success:
+      "bg-cta text-white shadow-[0_14px_30px_-16px_oklch(0.443_0.093_163/0.85)] hover:bg-[var(--cta-hover)] hover:shadow-[0_20px_40px_-18px_oklch(0.443_0.093_163/0.9)]",
   } as const;
 
   const classes = cn(base, variants[variant], className);
