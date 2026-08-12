@@ -23,7 +23,7 @@ const BONUSES = [
 
 export function Bonus() {
   return (
-    <section className="section-light py-14 sm:py-20">
+    <section className="bg-background py-14 sm:py-20">
       <div className="container-page text-center">
         <span className="inline-block rounded-full bg-gradient-primary px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
           🎁 Bônus Exclusivos

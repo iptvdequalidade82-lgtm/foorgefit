@@ -49,7 +49,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="section-light pb-16 pt-4 sm:pb-24">
+    <section className="bg-background pb-16 pt-4 sm:pb-24">
       <div className="container-page text-center">
         <h2 className="text-2xl font-extrabold sm:text-3xl">Perguntas Frequentes</h2>
         <p className="mt-4 text-sm opacity-70">Tire suas dúvidas sobre o produto</p>

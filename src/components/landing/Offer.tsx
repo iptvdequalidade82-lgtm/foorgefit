@@ -7,7 +7,7 @@ const BONUSES = ["250 Receitas Low Carb", "128 Receitas Anabólicas", "50 Receit
 
 export function Offer() {
   return (
-    <section id="oferta" className="scroll-mt-4 bg-background">
+    <section id="oferta" className="section-deep scroll-mt-4">
       <div className="bg-gradient-primary py-3 text-center">
         <p className="text-[11px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-sm">
           ⚡ Oferta Especial Por Tempo Limitado! ⚡
@@ -15,7 +15,7 @@ export function Offer() {
       </div>
 
       <div className="container-page py-14 text-center sm:py-20">
-        <span className="inline-block rounded-full bg-destructive px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-destructive-foreground sm:text-xs">
+        <span className="inline-block rounded-full bg-accent px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-accent-foreground sm:text-xs">
           93% de desconto somente hoje
         </span>
         <h2 className="mt-6 text-2xl font-extrabold sm:text-3xl">
