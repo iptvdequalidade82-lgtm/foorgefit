@@ -6,11 +6,11 @@ export function Intro() {
           Treinos personalizados como phat (power hypertrophy adaptive training) upper/lower
           push/pull, fullbody, metabólico e muito mais.
         </span>
-        <h2 className="mx-auto mt-8 max-w-3xl text-2xl font-extrabold leading-tight sm:text-3xl lg:text-4xl">
+        <h2 className="mx-auto mt-8 max-w-3xl text-2xl font-extrabold leading-tight text-teal sm:text-3xl lg:text-4xl">
           Treinos focado em cada grupo muscular é o fim das dúvidas sobre volume e alteração de
           treino.
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-sm text-primary sm:text-base">
+        <p className="mx-auto mt-6 max-w-2xl text-sm text-muted-foreground sm:text-base">
           Mais de <strong>2.347 pessoas</strong> já estão fazendo o acompanhamento direcionado e
           dando adeus as fichinhas de academia. <strong>E você?</strong>
         </p>

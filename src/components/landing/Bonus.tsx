@@ -28,7 +28,7 @@ export function Bonus() {
         <span className="inline-block rounded-full bg-gradient-primary px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
           🎁 Bônus Exclusivos
         </span>
-        <h2 className="mt-6 text-2xl font-extrabold sm:text-3xl">
+        <h2 className="mt-6 text-2xl font-extrabold text-teal sm:text-3xl">
           +3 Bônus Exclusivos Para Quem Adquirir Hoje
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm opacity-70">
@@ -48,7 +48,7 @@ export function Bonus() {
                 </span>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-base font-extrabold">{b.title}</h3>
+                <h3 className="text-base font-extrabold text-teal">{b.title}</h3>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:text-sm">
                   {b.text}
                 </p>

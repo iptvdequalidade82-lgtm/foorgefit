@@ -8,7 +8,7 @@ export function Testimonials() {
     <section className="bg-background py-14 sm:py-20">
       <div className="container-page text-center">
         <p className="text-[11px] font-bold uppercase tracking-[0.25em] opacity-60">Depoimentos</p>
-        <h2 className="mt-3 text-2xl font-extrabold sm:text-3xl">
+        <h2 className="mt-3 text-2xl font-extrabold text-teal sm:text-3xl">
           Quem Fez, <span className="text-primary">Se SUPEROU!</span>
         </h2>
 

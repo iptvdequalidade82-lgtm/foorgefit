@@ -22,7 +22,7 @@ export function Features() {
   return (
     <section className="bg-background py-14 sm:py-20">
       <div className="container-page text-center">
-        <h2 className="text-2xl font-extrabold sm:text-3xl">Veja o que você vai Aprender e Receber</h2>
+        <h2 className="text-2xl font-extrabold text-teal sm:text-3xl">Veja o que você vai Aprender e Receber</h2>
         <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground">
           Você vai encontrar métodos exclusivos e que funcionam para ajudá-lo a atingir seus
           objetivos. Com treinos personalizados para iniciantes, intermediários e avançados.
