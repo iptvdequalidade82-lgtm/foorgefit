@@ -46,6 +46,15 @@ export function Features() {
                     className="h-full w-full object-cover"
                   />
                 </div>
+              ) : i === 1 ? (
+                <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-white ring-1 ring-border sm:w-36">
+                  <img
+                    src={exerciseLibraryImage.url}
+                    alt="Biblioteca de exercícios com GIFs explicativos"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               ) : (
                 <Placeholder
                   label={item.image}
