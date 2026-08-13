@@ -1,6 +1,7 @@
 import { Check, ShoppingCart, Tag, Users } from "lucide-react";
-import { Placeholder } from "./Placeholder";
+import heroImage from "@/assets/hero-planilhas.jpg.asset.json";
 import { Reveal } from "./Reveal";
+
 
 const BENEFITS = [
   "+200 Planilhas de Treinos",
