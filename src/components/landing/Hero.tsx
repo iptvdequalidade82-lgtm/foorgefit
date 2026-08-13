@@ -1,5 +1,5 @@
 import { Check, ShoppingCart, Tag, Users } from "lucide-react";
-import heroImage from "@/assets/hero-planilhas.jpg.asset.json";
+import heroImage from "@/assets/hero-planilhas-clean.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 
@@ -81,18 +81,15 @@ export function Hero({ onCta }: { onCta: () => void }) {
           </Reveal>
 
           <Reveal delay={120} className="relative mx-auto w-full max-w-sm">
-            <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-[0_30px_70px_-40px_oklch(0_0_0/0.95)]">
+            <div className="relative">
               <img
                 src={heroImage.url}
                 alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
                 loading="eager"
-                className="aspect-[4/5] w-full object-cover object-center"
-              />
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/75 via-background/10 to-transparent"
+                className="aspect-[4/5] w-full object-cover object-center mix-blend-screen [mask-image:radial-gradient(78%_72%_at_50%_46%,#000_52%,transparent_100%)] [-webkit-mask-image:radial-gradient(78%_72%_at_50%_46%,#000_52%,transparent_100%)]"
               />
             </div>
+
             <span className="absolute -right-2 -top-3 rounded-md bg-accent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground shadow-card">
               93% OFF
             </span>
