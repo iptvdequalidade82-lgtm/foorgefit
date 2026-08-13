@@ -1,5 +1,6 @@
 import { Check, Lock } from "lucide-react";
 import { CtaButton } from "./CtaButton";
+import { Reveal } from "./Reveal";
 
 const CHECKOUT_URL = "https://checkpay.me/?p=100-planilhas-de-treinos";
 
@@ -8,69 +9,63 @@ const BONUSES = ["250 Receitas Low Carb", "128 Receitas Anabólicas", "50 Receit
 export function Offer() {
   return (
     <section id="oferta" className="section-deep scroll-mt-4">
-      <div className="bg-gradient-cta py-3 text-center">
-        <p className="text-[11px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-sm">
-          ⚡ Oferta Especial Por Tempo Limitado! ⚡
-        </p>
+      <div className="bg-cta py-3.5 text-center">
+        <p className="eyebrow text-white">Oferta Especial Por Tempo Limitado!</p>
       </div>
 
-      <div className="container-page py-14 text-center sm:py-20">
-        <span className="inline-block rounded-full bg-accent px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-accent-foreground sm:text-xs">
-          93% de desconto somente hoje
-        </span>
-        <h2 className="mt-6 text-2xl font-extrabold sm:text-3xl">
-          Pacote: +100 Planilhas de Treinos
-        </h2>
-        <p className="mt-4 text-sm text-muted-foreground">Pare de perder tempo!</p>
-        <p className="text-sm text-muted-foreground">
-          Saiba exatamente o que seguir e quais os melhores exercícios.
-        </p>
-
-        <div className="mx-auto mt-10 max-w-md rounded-2xl bg-gradient-offer p-6 shadow-glow sm:p-8">
-          <span className="inline-block rounded-full bg-white/15/25 px-4 py-1 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground">
-            ⭐ Super Oferta ⭐
+      <div className="container-page section-pad text-center">
+        <Reveal>
+          <span className="eyebrow inline-block rounded-full border border-accent/40 bg-accent/12 px-4 py-2 text-accent">
+            93% de desconto somente hoje
           </span>
-          <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide sm:text-base">
-            🏋 Pacote Completo
-          </h3>
+          <h2 className="display-2 stack-head mt-7">Pacote: +100 Planilhas de Treinos</h2>
+          <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
+            Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios.
+          </p>
+        </Reveal>
 
-          <div className="mt-5 rounded-xl bg-gradient-cta px-5 py-6 shadow-card">
-            <p className="flex items-center justify-center gap-2 text-xs font-semibold text-primary-foreground/85">
+        <Reveal
+          delay={120}
+          className="mx-auto mt-14 max-w-md rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
+        >
+          <span className="eyebrow inline-block text-accent">Super Oferta</span>
+          <h3 className="display-3 mt-4">Pacote Completo</h3>
+
+          <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
+            <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
               <span className="line-through">R$ 87,00</span>
-              <span className="rounded bg-background/25 px-1.5 py-0.5 text-[10px] font-extrabold">
+              <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
                 93% OFF
               </span>
             </p>
-            <p className="mt-2 text-4xl font-extrabold text-primary-foreground sm:text-5xl">
-              R$ 5,90
+            <p className="price-xl mt-3 text-white">R$ 5,90</p>
+            <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
+              Pagamento único
             </p>
-            <p className="mt-1 text-xs font-semibold text-primary-foreground/85">Pagamento único</p>
           </div>
 
-          <p className="mt-6 text-xs font-extrabold uppercase tracking-wide sm:text-sm">
-            🎁 + 3 Bônus Grátis
-          </p>
-          <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left">
+          <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
+          <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
             {BONUSES.map((b) => (
-              <li key={b} className="flex items-start gap-2 text-xs sm:text-sm">
-                <span className="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-cta">
-                  <Check className="h-2.5 w-2.5 text-primary-foreground" />
+              <li key={b} className="flex items-start gap-2.5 font-sans text-sm text-white/85">
+                <span className="mt-0.5 grid h-4.5 w-4.5 shrink-0 place-items-center rounded-full bg-primary/25">
+                  <Check className="h-2.5 w-2.5 text-primary" />
                 </span>
                 <span className="min-w-0">{b}</span>
               </li>
             ))}
           </ul>
 
-          <CtaButton variant="success" href={CHECKOUT_URL} className="mt-7 animate-pulse-soft">
+          <CtaButton variant="success" href={CHECKOUT_URL} className="mt-9">
             SIM, QUERO GARANTIR MEU PACOTE AGORA!
           </CtaButton>
 
-          <p className="mt-4 flex items-center justify-center gap-2 text-[11px] text-primary-foreground/80">
+          <p className="mt-5 flex items-center justify-center gap-2 font-sans text-[11px] text-white/55">
             <Lock className="h-3.5 w-3.5 shrink-0" /> Compra Segura
           </p>
-        </div>
+        </Reveal>
 
-        <p className="mx-auto mt-8 inline-block rounded-xl border border-primary/50 px-5 py-3 text-xs font-bold text-primary sm:text-sm">
+        <p className="mx-auto mt-10 inline-block rounded-xl border border-white/15 px-6 py-3.5 font-sans text-sm font-medium text-white/75">
           + 2.347 pessoas já transformaram suas vidas!
         </p>
       </div>
