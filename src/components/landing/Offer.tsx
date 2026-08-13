@@ -2,7 +2,7 @@ import { Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
 
-const CHECKOUT_URL = "https://checkpay.me/?p=100-planilhas-de-treinos";
+const CHECKOUT_URL = "https://pay.cakto.com.br/o5b2j8i_1039216";
 
 const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
 
