@@ -56,9 +56,20 @@ export function Offer() {
             SIM, QUERO GARANTIR MEU PACOTE AGORA!
           </CtaButton>
 
-          <p className="mt-5 flex items-center justify-center gap-2 font-sans text-[11px] text-white/55">
-            <Lock className="h-3.5 w-3.5 shrink-0" /> Compra Segura
-          </p>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-sans text-[11px] font-medium text-white/60">
+            {[
+              { icon: Lock, label: "Compra segura" },
+              { icon: Zap, label: "Acesso imediato" },
+              { icon: ShieldCheck, label: "Pagamento protegido" },
+              { icon: Smartphone, label: "Compatível com celular" },
+            ].map(({ icon: Icon, label }) => (
+              <li key={label} className="flex items-center gap-1.5">
+                <Icon className="h-3.5 w-3.5 shrink-0 text-primary" />
+                {label}
+              </li>
+            ))}
+          </ul>
+
         </Reveal>
 
         <p className="mx-auto mt-10 inline-block rounded-xl border border-white/15 px-6 py-3.5 font-sans text-sm font-medium text-white/75">
