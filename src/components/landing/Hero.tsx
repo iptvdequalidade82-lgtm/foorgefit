@@ -1,6 +1,7 @@
 import { Check, ShoppingCart, Tag, Users } from "lucide-react";
-import { Placeholder } from "./Placeholder";
+import heroImage from "@/assets/hero-planilhas.jpg.asset.json";
 import { Reveal } from "./Reveal";
+
 
 const BENEFITS = [
   "+200 Planilhas de Treinos",
@@ -80,13 +81,22 @@ export function Hero({ onCta }: { onCta: () => void }) {
           </Reveal>
 
           <Reveal delay={120} className="relative mx-auto w-full max-w-sm">
-            <Placeholder
-              label="IMAGEM HERO"
-              className="aspect-[4/5] w-full rounded-2xl ring-1 ring-white/10"
-            />
+            <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-[0_30px_70px_-40px_oklch(0_0_0/0.95)]">
+              <img
+                src={heroImage.url}
+                alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
+                loading="eager"
+                className="aspect-[4/5] w-full object-cover object-center"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/75 via-background/10 to-transparent"
+              />
+            </div>
             <span className="absolute -right-2 -top-3 rounded-md bg-accent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground shadow-card">
               93% OFF
             </span>
+
             <div className="mt-4 rounded-xl border border-white/12 bg-white/[0.05] px-5 py-4 text-center backdrop-blur-sm">
               <p className="eyebrow text-accent">Somente Hoje!</p>
               <p className="mt-1.5 font-sans text-sm text-white/70">São +200 Planilhas de Treinos</p>
