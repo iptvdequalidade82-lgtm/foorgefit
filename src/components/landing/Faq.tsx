@@ -43,6 +43,32 @@ const FAQS = [
       </p>
     ),
   },
+  {
+    q: "Posso acessar pelo celular?",
+    a: <p>Sim. O conteúdo foi pensado para ser acessado facilmente pelo celular.</p>,
+  },
+  {
+    q: "Os treinos são separados por grupos musculares?",
+    a: (
+      <p>
+        Sim. Os conteúdos são organizados para facilitar a localização dos diferentes tipos de
+        treino.
+      </p>
+    ),
+  },
+  {
+    q: "Posso começar a usar os treinos imediatamente?",
+    a: <p>Sim. Após receber o acesso, você já poderá consultar os conteúdos disponíveis.</p>,
+  },
+  {
+    q: "É pagamento único?",
+    a: (
+      <p>
+        Sim. O acesso é adquirido através de um pagamento único de{" "}
+        <strong className="font-semibold text-foreground">R$ 6,90</strong>.
+      </p>
+    ),
+  },
 ];
 
 export function Faq() {
