@@ -51,7 +51,7 @@ export function Faq() {
   return (
     <section className="section-pad bg-background">
       <div className="container-page text-center">
-        <h2 className="display-2 stack-head text-teal">Perguntas Frequentes</h2>
+        <h2 className="display-2 stack-head ">Perguntas Frequentes</h2>
         <p className="lead mx-auto mt-5 max-w-xl">Tire suas dúvidas sobre o produto</p>
 
         <div className="mx-auto mt-14 max-w-2xl space-y-3 text-left">
@@ -60,13 +60,13 @@ export function Faq() {
             return (
               <div
                 key={item.q}
-                className="overflow-hidden rounded-xl border border-border bg-surface shadow-[0_1px_2px_oklch(0.325_0.041_208/0.04)]"
+                className="overflow-hidden rounded-xl border border-border bg-white/[0.03] shadow-[0_1px_2px_oklch(0.325_0.041_208/0.04)]"
               >
                 <button
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-[0.95rem] font-bold tracking-[-0.01em] text-teal transition-colors duration-300 hover:text-primary"
+                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-[0.95rem] font-bold tracking-[-0.01em] transition-colors duration-300 hover:text-primary"
                 >
                   <span className="min-w-0">{item.q}</span>
                   <ChevronDown

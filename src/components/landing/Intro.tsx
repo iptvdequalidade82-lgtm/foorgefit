@@ -9,7 +9,7 @@ export function Intro() {
             Treinos personalizados como phat (power hypertrophy adaptive training) upper/lower
             push/pull, fullbody, metabólico e muito mais.
           </span>
-          <h2 className="display-2 stack-head mt-9 text-teal">
+          <h2 className="display-2 stack-head mt-9 ">
             Treinos focado em cada grupo muscular é o fim das dúvidas sobre volume e alteração de
             treino.
           </h2>

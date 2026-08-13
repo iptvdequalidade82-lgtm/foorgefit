@@ -19,7 +19,7 @@ export function Trust() {
     <section className="section-light section-pad">
       <div className="container-page text-center">
         <Reveal>
-          <h2 className="display-2 stack-head text-teal">Sua Confiança é Nossa Prioridade</h2>
+          <h2 className="display-2 stack-head ">Sua Confiança é Nossa Prioridade</h2>
           <p className="lead mx-auto mt-5 max-w-xl">
             Garantimos uma experiência segura e satisfatória
           </p>
@@ -31,7 +31,7 @@ export function Trust() {
               <span className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 ring-1 ring-primary/15">
                 <Icon className="h-5 w-5 text-primary" />
               </span>
-              <h3 className="display-3 mt-6 text-teal">{title}</h3>
+              <h3 className="display-3 mt-6 ">{title}</h3>
               <p className="mt-2.5 font-sans text-sm leading-relaxed text-muted-foreground">
                 {text}
               </p>

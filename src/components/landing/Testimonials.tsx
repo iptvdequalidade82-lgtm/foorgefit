@@ -10,7 +10,7 @@ export function Testimonials() {
       <div className="container-page text-center">
         <Reveal>
           <p className="eyebrow text-muted-foreground">Depoimentos</p>
-          <h2 className="display-2 stack-head mt-4 text-teal">
+          <h2 className="display-2 stack-head mt-4 ">
             Quem Fez, <span className="text-primary">Se SUPEROU!</span>
           </h2>
         </Reveal>
