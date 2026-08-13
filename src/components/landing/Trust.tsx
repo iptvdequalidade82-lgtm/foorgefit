@@ -1,4 +1,5 @@
 import { Heart, ShieldCheck } from "lucide-react";
+import { Reveal } from "./Reveal";
 
 const ITEMS = [
   {
@@ -15,23 +16,26 @@ const ITEMS = [
 
 export function Trust() {
   return (
-    <section className="section-light py-14 sm:py-20">
+    <section className="section-light section-pad">
       <div className="container-page text-center">
-        <h2 className="text-2xl font-extrabold text-teal sm:text-3xl">Sua Confiança é Nossa Prioridade</h2>
-        <p className="mt-4 text-sm opacity-70">Garantimos uma experiência segura e satisfatória</p>
+        <Reveal>
+          <h2 className="display-2 stack-head text-teal">Sua Confiança é Nossa Prioridade</h2>
+          <p className="lead mx-auto mt-5 max-w-xl">
+            Garantimos uma experiência segura e satisfatória
+          </p>
+        </Reveal>
 
-        <div className="mx-auto mt-10 grid max-w-3xl gap-6 sm:grid-cols-2">
-          {ITEMS.map(({ icon: Icon, title, text }) => (
-            <article
-              key={title}
-              className="rounded-2xl border border-primary/30 bg-surface p-8 text-surface-foreground shadow-card transition-colors duration-300 hover:border-primary"
-            >
-              <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-primary/15">
+        <div className="mx-auto mt-14 grid max-w-3xl gap-7 sm:grid-cols-2">
+          {ITEMS.map(({ icon: Icon, title, text }, i) => (
+            <Reveal key={title} delay={i * 90} as="article" className="card-premium p-9 text-left">
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-primary/10 ring-1 ring-primary/15">
                 <Icon className="h-5 w-5 text-primary" />
               </span>
-              <h3 className="mt-4 text-sm font-extrabold text-teal sm:text-base">{title}</h3>
-              <p className="mt-2 text-xs text-muted-foreground sm:text-sm">{text}</p>
-            </article>
+              <h3 className="display-3 mt-6 text-teal">{title}</h3>
+              <p className="mt-2.5 font-sans text-sm leading-relaxed text-muted-foreground">
+                {text}
+              </p>
+            </Reveal>
           ))}
         </div>
       </div>
