@@ -3,8 +3,9 @@ export function Footer() {
     <footer className="section-deep py-12">
       <div className="container-page text-center">
         <p className="font-sans text-xs tracking-wide text-white/50">
-          © 2026 Info Cursos Brasil.
+          © 2026. Todos os direitos reservados.
         </p>
+
       </div>
     </footer>
   );
