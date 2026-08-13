@@ -34,7 +34,7 @@ export function Offer() {
                 93% OFF
               </span>
             </p>
-            <p className="price-xl mt-3 text-white">R$ 5,90</p>
+            <p className="price-xl mt-3 text-white">R$ 6,90</p>
             <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
               Pagamento único
             </p>
