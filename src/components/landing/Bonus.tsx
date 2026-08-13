@@ -1,10 +1,12 @@
-import { Placeholder } from "./Placeholder";
 import { Reveal } from "./Reveal";
+import lowCarbImage from "@/assets/bonus-low-carb.jpg.asset.json";
+import anabolicasImage from "@/assets/bonus-anabolicas.jpg.asset.json";
+import fitImage from "@/assets/bonus-fit.jpg.asset.json";
 
 const BONUSES = [
   {
     tag: "Bônus #1",
-    image: "IMAGEM BÔNUS 1",
+    image: lowCarbImage.url,
     title: "500 Receitas Low Carb",
     text: "Preparado para você que está com dificuldades em montar cardápios para o seu dia a dia com foco em dietas Low Carb.",
   },
