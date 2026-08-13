@@ -9,8 +9,7 @@ export function Testimonials() {
     <section className="section-pad bg-background">
       <div className="container-page text-center">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">Depoimentos</p>
-          <h2 className="display-2 stack-head mt-4 ">
+          <h2 className="display-2 stack-head">
             Quem Fez, <span className="text-primary">Se SUPEROU!</span>
           </h2>
         </Reveal>
