@@ -1,6 +1,6 @@
 import heroImage from "@/assets/hero-planilhas.png.asset.json";
 import exerciseLibraryImage from "@/assets/exercise-library.jpg.asset.json";
-import { Placeholder } from "./Placeholder";
+import challengeImage from "@/assets/desafio-24-dias.jpg.asset.json";
 import { Reveal } from "./Reveal";
 
 const ITEMS = [
@@ -56,10 +56,14 @@ export function Features() {
                   />
                 </div>
               ) : (
-                <Placeholder
-                  label={item.image}
-                  className="mx-auto aspect-square w-32 rounded-full sm:w-36"
-                />
+                <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-white ring-1 ring-border sm:w-36">
+                  <img
+                    src={challengeImage.url}
+                    alt="Desafio de 24 dias no aplicativo de treinos"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               )}
               <h3 className="display-3 mt-7 ">{item.title}</h3>
               <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
