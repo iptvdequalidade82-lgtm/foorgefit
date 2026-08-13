@@ -12,13 +12,13 @@ const BONUSES = [
   },
   {
     tag: "Bônus #2",
-    image: "IMAGEM BÔNUS 2",
+    image: anabolicasImage.url,
     title: "300 Receitas Anabólicas",
     text: "Para você que deseja escolher um estilo de vida saudável com alimentação limpa, concentrada em alimentos integrais não refinados, em vez de alternativas pré-cozidas ou processadas.",
   },
   {
     tag: "Bônus #3",
-    image: "IMAGEM BÔNUS 3",
+    image: fitImage.url,
     title: "100 Receitas Saudáveis Fit",
     text: "Receitas para Secar! Este guia prático elaborado para proporcionar a você uma coleção irresistível de receitas saudáveis, projetadas especificamente para apoiar seus objetivos de perda de peso e bem estar.",
   },
@@ -45,8 +45,13 @@ export function Bonus() {
               as="article"
               className="card-premium flex flex-col overflow-hidden p-0 text-left"
             >
-              <div className="relative">
-                <Placeholder label={b.image} className="aspect-[16/10] w-full rounded-none" />
+              <div className="relative flex aspect-[16/10] w-full items-center justify-center overflow-hidden bg-white p-6">
+                <img
+                  src={b.image}
+                  alt={b.title}
+                  loading="lazy"
+                  className="h-full w-auto max-w-full rounded-md object-contain shadow-[0_18px_40px_-14px_rgba(0,0,0,0.55)]"
+                />
                 <span className="absolute left-4 top-4 rounded-md bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                   {b.tag}
                 </span>
