@@ -49,26 +49,29 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="bg-background pb-16 pt-4 sm:pb-24">
+    <section className="section-pad bg-background">
       <div className="container-page text-center">
-        <h2 className="text-2xl font-extrabold text-teal sm:text-3xl">Perguntas Frequentes</h2>
-        <p className="mt-4 text-sm opacity-70">Tire suas dúvidas sobre o produto</p>
+        <h2 className="display-2 stack-head text-teal">Perguntas Frequentes</h2>
+        <p className="lead mx-auto mt-5 max-w-xl">Tire suas dúvidas sobre o produto</p>
 
-        <div className="mx-auto mt-10 max-w-2xl space-y-3 text-left">
+        <div className="mx-auto mt-14 max-w-2xl space-y-3 text-left">
           {FAQS.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={item.q} className="overflow-hidden rounded-xl">
+              <div
+                key={item.q}
+                className="overflow-hidden rounded-xl border border-border bg-surface shadow-[0_1px_2px_oklch(0.325_0.041_208/0.04)]"
+              >
                 <button
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 bg-gradient-primary px-5 py-4 text-left text-sm font-bold text-primary-foreground transition-opacity duration-200 hover:opacity-90"
+                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-[0.95rem] font-bold tracking-[-0.01em] text-teal transition-colors duration-300 hover:text-primary"
                 >
                   <span className="min-w-0">{item.q}</span>
                   <ChevronDown
                     className={cn(
-                      "h-4 w-4 shrink-0 transition-transform duration-300",
+                      "h-4 w-4 shrink-0 text-primary transition-transform duration-300",
                       isOpen && "rotate-180",
                     )}
                   />
@@ -80,7 +83,7 @@ export function Faq() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <div className="bg-surface px-5 py-4 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                    <div className="border-t border-border px-6 pb-6 pt-5 font-sans text-sm leading-relaxed text-muted-foreground">
                       {item.a}
                     </div>
                   </div>
