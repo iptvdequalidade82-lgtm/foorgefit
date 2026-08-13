@@ -1,3 +1,4 @@
+import heroImage from "@/assets/hero-planilhas.png.asset.json";
 import { Placeholder } from "./Placeholder";
 import { Reveal } from "./Reveal";
 
@@ -35,10 +36,21 @@ export function Features() {
         <div className="mt-14 grid gap-7 md:grid-cols-3">
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 90} as="article" className="card-premium p-8">
-              <Placeholder
-                label={item.image}
-                className="mx-auto aspect-square w-32 rounded-full sm:w-36"
-              />
+              {i === 0 ? (
+                <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-white ring-1 ring-border sm:w-36">
+                  <img
+                    src={heroImage.url}
+                    alt="Planilhas de treino organizadas"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <Placeholder
+                  label={item.image}
+                  className="mx-auto aspect-square w-32 rounded-full sm:w-36"
+                />
+              )}
               <h3 className="display-3 mt-7 ">{item.title}</h3>
               <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
                 {item.text}
