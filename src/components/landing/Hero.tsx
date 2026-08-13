@@ -58,8 +58,9 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <button
               type="button"
               onClick={onCta}
-              className="mt-10 flex w-full max-w-md flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-xl bg-cta px-7 py-4 shadow-[0_16px_34px_-18px_oklch(0.443_0.093_163/0.9)] transition-[transform,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--cta-hover)] lg:mx-0"
+              className="mx-auto mt-10 flex w-full max-w-md flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-xl bg-cta px-7 py-4 shadow-[0_16px_34px_-18px_oklch(0.443_0.093_163/0.9)] transition-[transform,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--cta-hover)] lg:mx-0"
             >
+
               <span className="font-sans text-xs font-medium text-white/70 line-through sm:text-sm">
                 De: R$ 87,00
               </span>
