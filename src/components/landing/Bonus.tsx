@@ -5,19 +5,19 @@ const BONUSES = [
   {
     tag: "Bônus #1",
     image: "IMAGEM BÔNUS 1",
-    title: "250 Receitas Low Carb",
+    title: "500 Receitas Low Carb",
     text: "Preparado para você que está com dificuldades em montar cardápios para o seu dia a dia com foco em dietas Low Carb.",
   },
   {
     tag: "Bônus #2",
     image: "IMAGEM BÔNUS 2",
-    title: "128 Receitas Anabólicas",
+    title: "300 Receitas Anabólicas",
     text: "Para você que deseja escolher um estilo de vida saudável com alimentação limpa, concentrada em alimentos integrais não refinados, em vez de alternativas pré-cozidas ou processadas.",
   },
   {
     tag: "Bônus #3",
     image: "IMAGEM BÔNUS 3",
-    title: "50 Receitas Saudáveis",
+    title: "100 Receitas Saudáveis Fit",
     text: "Receitas para Secar! Este guia prático elaborado para proporcionar a você uma coleção irresistível de receitas saudáveis, projetadas especificamente para apoiar seus objetivos de perda de peso e bem estar.",
   },
 ];

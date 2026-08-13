@@ -10,9 +10,9 @@ import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
 
-const TITLE = "+100 Planilhas de Treinos Ajustado para o seu Biotipo";
+const TITLE = "+200 Planilhas de Treinos Ajustado para o seu Biotipo";
 const DESCRIPTION =
-  "Pare de perder tempo! +100 planilhas de treinos, +275 GIFs explicativos, prescrição para 12 meses e 3 bônus grátis por R$ 6,90.";
+  "Pare de perder tempo! +200 planilhas de treinos, +275 GIFs explicativos, prescrição para 12 meses e 3 bônus grátis por R$ 6,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

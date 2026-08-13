@@ -12,7 +12,7 @@ const FAQS = [
           transformar seus resultados, incluindo:
         </p>
         <p>
-          +100 Planilhas de Treinos personalizadas para hipertrofia, emagrecimento, definição
+          +200 Planilhas de Treinos personalizadas para hipertrofia, emagrecimento, definição
           muscular, resistência, mobilidade e flexibilidade.
         </p>
         <p>

@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 const ITEMS = [
   {
     image: "IMAGEM CARD 1",
-    title: "+ DE 100 PLANILHAS",
+    title: "+ DE 200 PLANILHAS",
     text: "Pare de perder tempo montando treinos ou copiando treinos genéricos da internet. Tudo aqui já está pronto, com instruções claras, séries, reps e GIFs.",
   },
   {

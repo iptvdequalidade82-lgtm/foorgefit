@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 
 const CHECKOUT_URL = "https://checkpay.me/?p=100-planilhas-de-treinos";
 
-const BONUSES = ["250 Receitas Low Carb", "128 Receitas Anabólicas", "50 Receitas Saudáveis"];
+const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
 
 export function Offer() {
   return (
@@ -15,7 +15,7 @@ export function Offer() {
 
       <div className="container-page section-pad text-center">
         <Reveal>
-          <h2 className="display-2 stack-head">Pacote: +100 Planilhas de Treinos</h2>
+          <h2 className="display-2 stack-head">Pacote: +200 Planilhas de Treinos</h2>
           <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
             Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios.
           </p>
