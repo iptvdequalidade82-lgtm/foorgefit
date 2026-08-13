@@ -1,5 +1,5 @@
 import { Check, ShoppingCart, Tag, Users } from "lucide-react";
-import heroImage from "@/assets/hero-planilhas-clean.jpg.asset.json";
+import heroImage from "@/assets/hero-planilhas.png.asset.json";
 import { Reveal } from "./Reveal";
 
 
