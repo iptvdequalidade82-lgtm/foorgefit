@@ -27,10 +27,7 @@ export function Bonus() {
     <section className="section-light section-pad">
       <div className="container-page text-center">
         <Reveal>
-          <span className="eyebrow inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-primary">
-            Bônus Exclusivos
-          </span>
-          <h2 className="display-2 stack-head mt-7 ">
+          <h2 className="display-2 stack-head">
             +3 Bônus Exclusivos Para Quem Adquirir Hoje
           </h2>
           <p className="lead mx-auto mt-5 max-w-2xl">

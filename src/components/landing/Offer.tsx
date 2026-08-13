@@ -15,10 +15,7 @@ export function Offer() {
 
       <div className="container-page section-pad text-center">
         <Reveal>
-          <span className="eyebrow inline-block rounded-full border border-accent/40 bg-accent/12 px-4 py-2 text-accent">
-            93% de desconto somente hoje
-          </span>
-          <h2 className="display-2 stack-head mt-7">Pacote: +100 Planilhas de Treinos</h2>
+          <h2 className="display-2 stack-head">Pacote: +100 Planilhas de Treinos</h2>
           <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
             Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios.
           </p>
@@ -28,8 +25,7 @@ export function Offer() {
           delay={120}
           className="mx-auto mt-14 max-w-md rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
         >
-          <span className="eyebrow inline-block text-accent">Super Oferta</span>
-          <h3 className="display-3 mt-4">Pacote Completo</h3>
+          <h3 className="display-3">Pacote Completo</h3>
 
           <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
             <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
