@@ -8,7 +8,7 @@ export function Placeholder({
   className?: string;
 }) {
   return (
-    <div className={cn("placeholder-box rounded-xl", className)} aria-label={label}>
+    <div className={cn("placeholder-box overflow-hidden rounded-xl", className)} aria-label={label}>
       <span className="px-2">[{label}]</span>
     </div>
   );

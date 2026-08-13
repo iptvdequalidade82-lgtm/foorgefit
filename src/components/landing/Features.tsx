@@ -1,4 +1,5 @@
 import { Placeholder } from "./Placeholder";
+import { Reveal } from "./Reveal";
 
 const ITEMS = [
   {
@@ -20,31 +21,29 @@ const ITEMS = [
 
 export function Features() {
   return (
-    <section className="bg-background py-14 sm:py-20">
+    <section className="section-pad bg-background">
       <div className="container-page text-center">
-        <h2 className="text-2xl font-extrabold text-teal sm:text-3xl">Veja o que você vai Aprender e Receber</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-muted-foreground">
-          Você vai encontrar métodos exclusivos e que funcionam para ajudá-lo a atingir seus
-          objetivos. Com treinos personalizados para iniciantes, intermediários e avançados.
-        </p>
-        <p className="mt-6 text-sm font-extrabold uppercase tracking-wide text-primary">
-          Chega de depender de fichinhas da academia!
-        </p>
+        <Reveal>
+          <h2 className="display-2 stack-head text-teal">Veja o que você vai Aprender e Receber</h2>
+          <p className="lead mx-auto mt-6 max-w-2xl">
+            Você vai encontrar métodos exclusivos e que funcionam para ajudá-lo a atingir seus
+            objetivos. Com treinos personalizados para iniciantes, intermediários e avançados.
+          </p>
+          <p className="eyebrow mt-8 text-primary">Chega de depender de fichinhas da academia!</p>
+        </Reveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {ITEMS.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-2xl border border-border bg-surface p-6 shadow-card transition-transform duration-300 hover:-translate-y-1 hover:border-primary/60"
-            >
-              <Placeholder label={item.image} className="mx-auto aspect-square w-36 rounded-full" />
-              <h3 className="mt-5 text-sm font-extrabold uppercase tracking-wide text-primary sm:text-base">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+        <div className="mt-14 grid gap-7 md:grid-cols-3">
+          {ITEMS.map((item, i) => (
+            <Reveal key={item.title} delay={i * 90} as="article" className="card-premium p-8">
+              <Placeholder
+                label={item.image}
+                className="mx-auto aspect-square w-32 rounded-full sm:w-36"
+              />
+              <h3 className="display-3 mt-7 text-teal">{item.title}</h3>
+              <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
                 {item.text}
               </p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

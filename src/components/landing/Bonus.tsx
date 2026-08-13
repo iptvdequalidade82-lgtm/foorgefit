@@ -1,4 +1,5 @@
 import { Placeholder } from "./Placeholder";
+import { Reveal } from "./Reveal";
 
 const BONUSES = [
   {
@@ -23,37 +24,41 @@ const BONUSES = [
 
 export function Bonus() {
   return (
-    <section className="bg-background py-14 sm:py-20">
+    <section className="section-light section-pad">
       <div className="container-page text-center">
-        <span className="inline-block rounded-full bg-gradient-primary px-4 py-1.5 text-[10px] font-extrabold uppercase tracking-widest text-primary-foreground sm:text-xs">
-          🎁 Bônus Exclusivos
-        </span>
-        <h2 className="mt-6 text-2xl font-extrabold text-teal sm:text-3xl">
-          +3 Bônus Exclusivos Para Quem Adquirir Hoje
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-sm opacity-70">
-          Além do produto principal, você recebe acesso imediato a estes bônus incríveis
-        </p>
+        <Reveal>
+          <span className="eyebrow inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-[oklch(0.55_0.1_84)]">
+            Bônus Exclusivos
+          </span>
+          <h2 className="display-2 stack-head mt-7 text-teal">
+            +3 Bônus Exclusivos Para Quem Adquirir Hoje
+          </h2>
+          <p className="lead mx-auto mt-5 max-w-2xl">
+            Além do produto principal, você recebe acesso imediato a estes bônus incríveis
+          </p>
+        </Reveal>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {BONUSES.map((b) => (
-            <article
+        <div className="mt-14 grid gap-7 md:grid-cols-3">
+          {BONUSES.map((b, i) => (
+            <Reveal
               key={b.tag}
-              className="overflow-hidden rounded-2xl border border-border bg-surface text-surface-foreground shadow-card transition-transform duration-300 hover:-translate-y-1"
+              delay={i * 90}
+              as="article"
+              className="card-premium flex flex-col overflow-hidden p-0 text-left"
             >
               <div className="relative">
                 <Placeholder label={b.image} className="aspect-[16/10] w-full rounded-none" />
-                <span className="absolute left-3 top-3 rounded-md bg-gradient-primary px-2.5 py-1 text-[10px] font-extrabold uppercase text-primary-foreground">
+                <span className="absolute left-4 top-4 rounded-md bg-teal px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                   {b.tag}
                 </span>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-base font-extrabold text-teal">{b.title}</h3>
-                <p className="mt-3 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+              <div className="flex flex-1 flex-col p-7">
+                <h3 className="display-3 text-teal">{b.title}</h3>
+                <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
                   {b.text}
                 </p>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
