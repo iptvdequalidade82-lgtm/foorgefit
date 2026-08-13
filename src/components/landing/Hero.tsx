@@ -82,13 +82,16 @@ export function Hero({ onCta }: { onCta: () => void }) {
           </Reveal>
 
           <Reveal delay={120} className="relative mx-auto w-full max-w-sm">
-            <img
-              src={heroImage.url}
-              alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
-              loading="eager"
-              className="w-full object-contain drop-shadow-[0_24px_48px_oklch(0_0_0/0.65)]"
-            />
+            <div className="rounded-3xl bg-white p-5 ring-1 ring-white/10 shadow-[0_30px_80px_-20px_oklch(0_0_0/0.85),0_0_0_1px_oklch(1_0_0/0.06)]">
+              <img
+                src={heroImage.url}
+                alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
+                loading="eager"
+                className="w-full object-contain"
+              />
+            </div>
           </Reveal>
+
 
         </div>
       </div>
