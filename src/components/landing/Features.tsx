@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-planilhas.png.asset.json";
+import exerciseLibraryImage from "@/assets/exercise-library.jpg.asset.json";
 import { Placeholder } from "./Placeholder";
 import { Reveal } from "./Reveal";
 
