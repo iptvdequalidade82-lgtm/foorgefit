@@ -17,7 +17,7 @@ const DESCRIPTION =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${TITLE} | Info Cursos Brasil` },
+      { title: TITLE },
       { name: "description", content: DESCRIPTION },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },

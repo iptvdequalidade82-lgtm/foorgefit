@@ -1,5 +1,5 @@
 import { Check, ShoppingCart, Tag, Users } from "lucide-react";
-import heroImage from "@/assets/hero-planilhas-clean.jpg.asset.json";
+import heroImage from "@/assets/hero-planilhas.png.asset.json";
 import { Reveal } from "./Reveal";
 
 
@@ -58,8 +58,9 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <button
               type="button"
               onClick={onCta}
-              className="mt-10 flex w-full max-w-md flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-xl bg-cta px-7 py-4 shadow-[0_16px_34px_-18px_oklch(0.443_0.093_163/0.9)] transition-[transform,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--cta-hover)] lg:mx-0"
+              className="mx-auto mt-10 flex w-full max-w-md flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-xl bg-cta px-7 py-4 shadow-[0_16px_34px_-18px_oklch(0.443_0.093_163/0.9)] transition-[transform,background-color] duration-300 ease-out hover:-translate-y-0.5 hover:bg-[var(--cta-hover)] lg:mx-0"
             >
+
               <span className="font-sans text-xs font-medium text-white/70 line-through sm:text-sm">
                 De: R$ 87,00
               </span>
@@ -81,24 +82,14 @@ export function Hero({ onCta }: { onCta: () => void }) {
           </Reveal>
 
           <Reveal delay={120} className="relative mx-auto w-full max-w-sm">
-            <div className="relative">
-              <img
-                src={heroImage.url}
-                alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
-                loading="eager"
-                className="aspect-[4/5] w-full object-cover object-center mix-blend-screen [mask-image:radial-gradient(78%_72%_at_50%_46%,#000_52%,transparent_100%)] [-webkit-mask-image:radial-gradient(78%_72%_at_50%_46%,#000_52%,transparent_100%)]"
-              />
-            </div>
-
-            <span className="absolute -right-2 -top-3 rounded-md bg-accent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground shadow-card">
-              93% OFF
-            </span>
-
-            <div className="mt-4 rounded-xl border border-white/12 bg-white/[0.05] px-5 py-4 text-center backdrop-blur-sm">
-              <p className="eyebrow text-accent">Somente Hoje!</p>
-              <p className="mt-1.5 font-sans text-sm text-white/70">São +200 Planilhas de Treinos</p>
-            </div>
+            <img
+              src={heroImage.url}
+              alt="Planilhas de treino organizadas: hipertrofia, full body, glúteos e pernas"
+              loading="eager"
+              className="w-full object-contain drop-shadow-[0_24px_48px_oklch(0_0_0/0.65)]"
+            />
           </Reveal>
+
         </div>
       </div>
     </section>
