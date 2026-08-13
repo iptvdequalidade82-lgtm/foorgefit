@@ -12,7 +12,7 @@ const FAQS = [
           transformar seus resultados, incluindo:
         </p>
         <p>
-          +100 Planilhas de Treinos personalizadas para hipertrofia, emagrecimento, definição
+          +200 Planilhas de Treinos personalizadas para hipertrofia, emagrecimento, definição
           muscular, resistência, mobilidade e flexibilidade.
         </p>
         <p>
@@ -20,7 +20,10 @@ const FAQS = [
           outros).
         </p>
         <p>Prescrição de Treinos para 12 meses, garantindo evolução constante.</p>
-        <p>+3 Bônus Exclusivo</p>
+        <p>
+          +3 Bônus Exclusivos: 500 Receitas Low Carb, 300 Receitas Anabólicas e 100 Receitas
+          Saudáveis Fit.
+        </p>
       </div>
     ),
   },
