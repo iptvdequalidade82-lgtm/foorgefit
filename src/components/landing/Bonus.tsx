@@ -27,10 +27,10 @@ export function Bonus() {
     <section className="section-light section-pad">
       <div className="container-page text-center">
         <Reveal>
-          <span className="eyebrow inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-[oklch(0.55_0.1_84)]">
+          <span className="eyebrow inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-primary">
             Bônus Exclusivos
           </span>
-          <h2 className="display-2 stack-head mt-7 text-teal">
+          <h2 className="display-2 stack-head mt-7 ">
             +3 Bônus Exclusivos Para Quem Adquirir Hoje
           </h2>
           <p className="lead mx-auto mt-5 max-w-2xl">
@@ -48,12 +48,12 @@ export function Bonus() {
             >
               <div className="relative">
                 <Placeholder label={b.image} className="aspect-[16/10] w-full rounded-none" />
-                <span className="absolute left-4 top-4 rounded-md bg-teal px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                <span className="absolute left-4 top-4 rounded-md bg-primary px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
                   {b.tag}
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-7">
-                <h3 className="display-3 text-teal">{b.title}</h3>
+                <h3 className="display-3 ">{b.title}</h3>
                 <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
                   {b.text}
                 </p>

@@ -24,7 +24,7 @@ export function Features() {
     <section className="section-pad bg-background">
       <div className="container-page text-center">
         <Reveal>
-          <h2 className="display-2 stack-head text-teal">Veja o que você vai Aprender e Receber</h2>
+          <h2 className="display-2 stack-head ">Veja o que você vai Aprender e Receber</h2>
           <p className="lead mx-auto mt-6 max-w-2xl">
             Você vai encontrar métodos exclusivos e que funcionam para ajudá-lo a atingir seus
             objetivos. Com treinos personalizados para iniciantes, intermediários e avançados.
@@ -39,7 +39,7 @@ export function Features() {
                 label={item.image}
                 className="mx-auto aspect-square w-32 rounded-full sm:w-36"
               />
-              <h3 className="display-3 mt-7 text-teal">{item.title}</h3>
+              <h3 className="display-3 mt-7 ">{item.title}</h3>
               <p className="mt-3.5 font-sans text-sm leading-relaxed text-muted-foreground">
                 {item.text}
               </p>

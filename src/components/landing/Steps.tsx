@@ -38,7 +38,7 @@ export function Steps() {
               as="article"
               className="rounded-2xl border border-white/12 bg-white/[0.06] p-8 text-left backdrop-blur-sm transition-colors duration-300 hover:border-white/30"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/10 font-display text-base font-extrabold text-white">
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-primary/15 ring-1 ring-primary/35 font-display text-base font-extrabold text-primary">
                 {s.n}
               </span>
               <h3 className="display-3 mt-6">{s.title}</h3>

@@ -9,6 +9,10 @@ import { Offer } from "@/components/landing/Offer";
 import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
+import { Stats } from "@/components/landing/Stats";
+import { Categories } from "@/components/landing/Categories";
+import { Preview } from "@/components/landing/Preview";
+import { StickyCta } from "@/components/landing/StickyCta";
 
 const TITLE = "+100 Planilhas de Treinos Ajustado para o seu Biotipo";
 const DESCRIPTION =
@@ -36,8 +40,11 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <Hero onCta={scrollToOffer} />
+      <Stats />
+      <Categories />
       <Intro />
       <Features />
+      <Preview />
       <Bonus />
       <Steps />
       <Testimonials />
@@ -45,6 +52,8 @@ function Index() {
       <Trust />
       <Faq />
       <Footer />
+      <div className="h-20 lg:hidden" />
+      <StickyCta onCta={scrollToOffer} />
     </main>
   );
 }
