@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-planilhas.png.asset.json";
+import exerciseLibraryImage from "@/assets/exercise-library.jpg.asset.json";
 import { Placeholder } from "./Placeholder";
 import { Reveal } from "./Reveal";
 
@@ -41,6 +42,15 @@ export function Features() {
                   <img
                     src={heroImage.url}
                     alt="Planilhas de treino organizadas"
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : i === 1 ? (
+                <div className="mx-auto aspect-square w-32 overflow-hidden rounded-full bg-white ring-1 ring-border sm:w-36">
+                  <img
+                    src={exerciseLibraryImage.url}
+                    alt="Biblioteca de exercícios com GIFs explicativos"
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
