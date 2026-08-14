@@ -29,9 +29,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    trackViewContent();
+  }, []);
+
   const scrollToOffer = () => {
     document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" });
   };
+
 
   return (
     <main className="min-h-screen bg-background">
