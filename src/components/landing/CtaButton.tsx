@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import { trackInitiateCheckout } from "@/lib/pixel";
+
 
 type Props = {
   children: React.ReactNode;
@@ -22,11 +24,21 @@ export function CtaButton({ children, className, variant = "primary", href, onCl
 
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={classes}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+        onClick={() => {
+          trackInitiateCheckout();
+          onClick?.();
+        }}
+      >
         {children}
       </a>
     );
   }
+
   return (
     <button type="button" onClick={onClick} className={classes}>
       {children}

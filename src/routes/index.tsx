@@ -1,4 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { trackViewContent } from "@/lib/pixel";
+
 import { Hero } from "@/components/landing/Hero";
 import { Intro } from "@/components/landing/Intro";
 import { Features } from "@/components/landing/Features";
@@ -29,9 +32,14 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    trackViewContent();
+  }, []);
+
   const scrollToOffer = () => {
     document.getElementById("oferta")?.scrollIntoView({ behavior: "smooth" });
   };
+
 
   return (
     <main className="min-h-screen bg-background">
