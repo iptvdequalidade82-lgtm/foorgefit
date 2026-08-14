@@ -1,9 +1,9 @@
 import { Quote, Star } from "lucide-react";
 import { Reveal } from "./Reveal";
-import cliente1 from "@/assets/cliente-download_4.jpg.asset.json";
-import cliente2 from "@/assets/cliente-download_5.jpg.asset.json";
-import cliente3 from "@/assets/cliente-download_6.jpg.asset.json";
-import cliente4 from "@/assets/cliente-4.jpg.asset.json";
+import cliente1 from "@/assets/dep-download_9.jpg.asset.json";
+import cliente2 from "@/assets/dep-Selfie_masculina.jpg.asset.json";
+import cliente3 from "@/assets/dep-download_8.jpg.asset.json";
+import cliente4 from "@/assets/dep-download_7.jpg.asset.json";
 
 const ITEMS = [
   {
@@ -26,7 +26,7 @@ const ITEMS = [
   },
   {
     photo: cliente4.url,
-    name: "Beatriz Souza",
+    name: "Rafael Souza",
     location: "Campinas / SP",
     text: "O desafio de 24 dias me tirou da estagnação. Voltei a ter constância na rotina.",
   },
