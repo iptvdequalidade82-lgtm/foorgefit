@@ -2,7 +2,7 @@ import { Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
 
-const CHECKOUT_URL = "https://pay.cakto.com.br/o5b2j8i_1039216";
+const CHECKOUT_URL = "https://pay.sunize.com.br/uIQOAFXG#643fa065-1d6d-4073-83d8-ec29dbf797c8";
 
 const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
 
