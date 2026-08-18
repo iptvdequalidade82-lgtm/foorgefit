@@ -18,7 +18,7 @@ export const PRODUCT = {
   content_type: "product",
   content_ids: ["planilhas-200"],
   currency: "BRL",
-  value: 6.9,
+  value: 9.9,
 };
 
 export function trackViewContent() {
