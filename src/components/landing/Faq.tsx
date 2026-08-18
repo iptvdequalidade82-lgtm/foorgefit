@@ -68,7 +68,7 @@ const FAQS = [
     a: (
       <p>
         Sim. O acesso é adquirido através de um pagamento único de{" "}
-        <strong className="font-semibold text-foreground">R$ 6,90</strong>.
+        <strong className="font-semibold text-foreground">R$ 9,90</strong>.
       </p>
     ),
   },

@@ -68,7 +68,7 @@ export function Hero({ onCta }: { onCta: () => void }) {
                 Por apenas:
               </span>
               <span className="font-display text-2xl font-extrabold tracking-tight text-white">
-                R$ 6,90
+                R$ 9,90
               </span>
               <span className="rounded-md bg-white/15 px-2 py-0.5 text-[10px] font-bold tracking-wider text-white">
                 93% OFF
