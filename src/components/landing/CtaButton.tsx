@@ -24,6 +24,14 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
 
   const classes = cn(base, variants[variant], className);
 
+  if (to) {
+    return (
+      <Link to={to} className={classes} onClick={() => onClick?.()}>
+        {children}
+      </Link>
+    );
+  }
+
   if (href) {
     return (
       <a
