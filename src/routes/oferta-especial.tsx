@@ -64,7 +64,7 @@ function OfertaEspecial() {
             <h1 className="display-2 stack-head">
               Aproveite agora o Pacote Completo com desconto
             </h1>
-            <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
+            <p className="mx-auto mt-4 max-w-xl font-sans text-sm leading-relaxed text-white/65 sm:mt-5 sm:text-base">
               Você está a um passo de garantir o Pacote Simples. Antes disso, libere todo o método
               completo por menos de R$ 6 a mais — só nesta página.
             </p>
@@ -72,9 +72,9 @@ function OfertaEspecial() {
 
           <Reveal
             delay={120}
-            className="mx-auto mt-12 max-w-2xl rounded-2xl border border-primary/50 bg-white/[0.07] p-8 shadow-glow backdrop-blur-sm sm:p-10"
+            className="mx-auto mt-8 max-w-2xl rounded-2xl border border-primary/50 bg-white/[0.07] p-5 shadow-glow backdrop-blur-sm sm:mt-12 sm:p-10"
           >
-            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-black">
+            <div className="mb-6 overflow-hidden rounded-xl border border-white/10 bg-black sm:mb-7">
               <img
                 src={completoImage.url}
                 alt="Materiais do Pacote Completo"
@@ -84,21 +84,21 @@ function OfertaEspecial() {
 
             <h2 className="display-3 text-center">Pacote Completo</h2>
 
-            <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8 text-center">
-              <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
+            <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.06] px-4 py-6 text-center sm:mt-7 sm:px-6 sm:py-8">
+              <p className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 font-sans text-xs font-medium text-white/60">
                 <span className="line-through">R$ 19,90</span>
                 <span className="rounded bg-primary px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
                   DESCONTO EXCLUSIVO
                 </span>
               </p>
               <p className="price-xl mt-3 text-white">R$ 15,90</p>
-              <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
+              <p className="mt-2 font-sans text-[11px] font-medium uppercase tracking-[0.16em] text-white/55 sm:text-xs sm:tracking-[0.18em]">
                 Pagamento único
               </p>
             </div>
 
-            <p className="eyebrow mt-8 text-center text-white/70">Você recebe tudo isto</p>
-            <ul className="mx-auto mt-5 max-w-sm space-y-3 text-left">
+            <p className="eyebrow mt-7 text-center text-white/70 sm:mt-8">Você recebe tudo isto</p>
+            <ul className="mx-auto mt-5 max-w-sm space-y-2.5 text-left sm:space-y-3">
               {ITEMS.map((item) => (
                 <li key={item} className="flex items-start gap-2.5 font-sans text-sm text-white/85">
                   <span className="mt-0.5 grid h-4.5 w-4.5 shrink-0 place-items-center rounded-full bg-primary/25">
@@ -109,7 +109,7 @@ function OfertaEspecial() {
               ))}
             </ul>
 
-            <CtaButton variant="success" href={CHECKOUT_COMPLETO_DESCONTO} className="mt-9">
+            <CtaButton variant="success" href={CHECKOUT_COMPLETO_DESCONTO} className="mt-7 sm:mt-9">
               SIM! QUERO O PACOTE COMPLETO POR R$ 15,90
             </CtaButton>
 
@@ -118,7 +118,7 @@ function OfertaEspecial() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackInitiateCheckout()}
-              className="tap mt-3.5 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
+              className="tap mt-3 inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-4 py-3.5 text-center font-display text-[0.8rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:mt-3.5 sm:min-h-14 sm:px-7 sm:py-4 sm:text-sm"
             >
               Continuar somente com o Pacote Simples — R$ 9,90
               <ArrowRight className="h-4 w-4 shrink-0" />
