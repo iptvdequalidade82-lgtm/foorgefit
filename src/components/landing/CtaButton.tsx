@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { trackInitiateCheckout } from "@/lib/pixel";
 
@@ -7,6 +8,7 @@ type Props = {
   className?: string;
   variant?: "primary" | "success";
   href?: string;
+  to?: string;
   onClick?: () => void;
 };
 
