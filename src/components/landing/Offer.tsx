@@ -118,7 +118,16 @@ export function Offer() {
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md bg-primary px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-white">
               Mais completo
             </span>
+            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-black">
+              <img
+                src={completoImage.url}
+                alt="Fichas e materiais do Pacote Completo"
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+            </div>
             <h3 className="display-3">Pacote Completo</h3>
+
 
             <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
               <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
