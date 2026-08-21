@@ -109,7 +109,7 @@ function OfertaEspecial() {
               ))}
             </ul>
 
-            <CtaButton variant="success" href={CHECKOUT_COMPLETO_DESCONTO} className="mt-9">
+            <CtaButton variant="success" href={CHECKOUT_COMPLETO_DESCONTO} className="mt-7 sm:mt-9">
               SIM! QUERO O PACOTE COMPLETO POR R$ 15,90
             </CtaButton>
 
@@ -118,7 +118,7 @@ function OfertaEspecial() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackInitiateCheckout()}
-              className="tap mt-3.5 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
+              className="tap mt-3 inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-4 py-3.5 text-center font-display text-[0.8rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:mt-3.5 sm:min-h-14 sm:px-7 sm:py-4 sm:text-sm"
             >
               Continuar somente com o Pacote Simples — R$ 9,90
               <ArrowRight className="h-4 w-4 shrink-0" />
