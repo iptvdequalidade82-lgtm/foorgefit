@@ -131,10 +131,11 @@ function OfertaEspecial() {
               href={CHECKOUT_SIMPLES}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 font-sans text-sm font-medium text-white/70 underline underline-offset-4 transition-colors hover:text-white"
+              onClick={() => trackInitiateCheckout()}
+              className="tap mx-auto mt-5 inline-flex min-h-14 w-full max-w-md items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
             >
-              Não, obrigado. Continuar com o Pacote Simples por R$ 9,90
-              <ArrowRight className="h-3.5 w-3.5" />
+              Continuar somente com o Pacote Simples — R$ 9,90
+              <ArrowRight className="h-4 w-4 shrink-0" />
             </a>
           </div>
         </div>
