@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { ArrowRight, Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
 import { CtaButton } from "@/components/landing/CtaButton";
 import { Reveal } from "@/components/landing/Reveal";
-import { trackViewContent } from "@/lib/pixel";
+import { trackViewContent, trackInitiateCheckout } from "@/lib/pixel";
 import { CHECKOUT_SIMPLES, CHECKOUT_COMPLETO_DESCONTO } from "@/lib/checkout";
 import completoImage from "@/assets/oferta-completo.jpg.asset.json";
 
