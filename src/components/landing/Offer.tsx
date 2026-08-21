@@ -72,7 +72,16 @@ export function Offer() {
             delay={120}
             className="rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
           >
+            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-white">
+              <img
+                src={simplesImage.url}
+                alt="Planilhas de treino do Pacote Simples"
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+            </div>
             <h3 className="display-3">Pacote Simples</h3>
+
 
             <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
               <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
