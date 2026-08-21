@@ -30,10 +30,10 @@ export function Hero({ onCta }: { onCta: () => void }) {
         <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <Reveal className="text-center lg:text-left">
             <h1 className="display-1 mx-auto max-w-[16ch] lg:mx-0">
-              +200 Planilhas de Treinos Ajustado para o seu Biotipo
+              +200 Planilhas de Treino Prontas para o Seu Biotipo
             </h1>
             <h2 className="mx-auto mt-6 max-w-xl font-sans text-base font-medium leading-relaxed text-white/70 sm:text-lg lg:mx-0">
-              Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios
+              Mais de 200 planilhas de treino prontas, +275 GIFs explicativos e 3 bônus exclusivos por R$ 9,90.
             </h2>
 
             <p className="mt-8 flex items-center justify-center gap-2.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-white/60 lg:justify-start">
