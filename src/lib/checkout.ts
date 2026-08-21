@@ -4,6 +4,6 @@ export const CHECKOUT_SIMPLES =
 export const CHECKOUT_COMPLETO =
   "https://pay.sunize.com.br/fGkFdGKA#9f291465-20d2-4706-b213-ae47eaa893b8";
 
-// Oferta de cross-sell (Pacote Completo com desconto por R$ 15,90).
-// Substituir pelo link definitivo assim que disponível.
-export const CHECKOUT_COMPLETO_DESCONTO = CHECKOUT_COMPLETO;
+// Oferta de cross-sell: Pacote Completo com desconto por R$ 15,90.
+export const CHECKOUT_COMPLETO_DESCONTO =
+  "https://pay.sunize.com.br/wtUjiZDk#968f61ee-b941-4b06-9e43-748a26e63200";
