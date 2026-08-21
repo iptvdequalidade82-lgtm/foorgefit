@@ -113,6 +113,21 @@ function OfertaEspecial() {
               SIM! QUERO O PACOTE COMPLETO POR R$ 15,90
             </CtaButton>
 
+            <a
+              href={CHECKOUT_SIMPLES}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackInitiateCheckout()}
+              className="tap mt-3.5 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
+            >
+              Continuar somente com o Pacote Simples — R$ 9,90
+              <ArrowRight className="h-4 w-4 shrink-0" />
+            </a>
+
+            <p className="mt-4 text-center font-sans text-xs text-white/50">
+              Tem certeza de que deseja continuar somente com o Pacote Simples?
+            </p>
+
             <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-sans text-[11px] font-medium text-white/60">
               {TRUST.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-1.5">
@@ -122,22 +137,6 @@ function OfertaEspecial() {
               ))}
             </ul>
           </Reveal>
-
-          <div className="mx-auto mt-10 max-w-2xl text-center">
-            <p className="font-sans text-sm text-white/55">
-              Tem certeza de que deseja continuar somente com o Pacote Simples?
-            </p>
-            <a
-              href={CHECKOUT_SIMPLES}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackInitiateCheckout()}
-              className="tap mx-auto mt-5 inline-flex min-h-14 w-full max-w-md items-center justify-center gap-2 rounded-2xl border border-white/25 bg-white/[0.06] px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] text-white/85 transition-colors duration-300 hover:border-white/45 hover:bg-white/[0.1] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base"
-            >
-              Continuar somente com o Pacote Simples — R$ 9,90
-              <ArrowRight className="h-4 w-4 shrink-0" />
-            </a>
-          </div>
         </div>
       </section>
     </main>
