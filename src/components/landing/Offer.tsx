@@ -104,7 +104,7 @@ export function Offer() {
               ))}
             </ul>
 
-            <CtaButton variant="success" href={CHECKOUT_URL} className="mt-9">
+            <CtaButton variant="success" to="/oferta-especial" className="mt-9">
               SIM, QUERO GARANTIR MEU PACOTE AGORA!
             </CtaButton>
 
