@@ -1,6 +1,8 @@
 import { Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
+import simplesImage from "@/assets/oferta-simples.jpg.asset.json";
+import completoImage from "@/assets/oferta-completo.jpg.asset.json";
 
 const CHECKOUT_URL = "https://pay.sunize.com.br/uIQOAFXG#643fa065-1d6d-4073-83d8-ec29dbf797c8";
 const CHECKOUT_URL_COMPLETO = CHECKOUT_URL;
