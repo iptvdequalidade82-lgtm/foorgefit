@@ -4,8 +4,9 @@ import { Reveal } from "./Reveal";
 import simplesImage from "@/assets/oferta-simples.jpg.asset.json";
 import completoImage from "@/assets/oferta-completo.jpg.asset.json";
 
-const CHECKOUT_URL = "https://pay.sunize.com.br/uIQOAFXG#643fa065-1d6d-4073-83d8-ec29dbf797c8";
-const CHECKOUT_URL_COMPLETO = "https://pay.sunize.com.br/fGkFdGKA#9f291465-20d2-4706-b213-ae47eaa893b8";
+import { CHECKOUT_COMPLETO } from "@/lib/checkout";
+
+const CHECKOUT_URL_COMPLETO = CHECKOUT_COMPLETO;
 
 const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
 
@@ -103,7 +104,7 @@ export function Offer() {
               ))}
             </ul>
 
-            <CtaButton variant="success" href={CHECKOUT_URL} className="mt-9">
+            <CtaButton variant="success" to="/oferta-especial" className="mt-9">
               SIM, QUERO GARANTIR MEU PACOTE AGORA!
             </CtaButton>
 
