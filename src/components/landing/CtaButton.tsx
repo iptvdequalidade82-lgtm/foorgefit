@@ -12,7 +12,7 @@ type Props = {
   onClick?: () => void;
 };
 
-export function CtaButton({ children, className, variant = "primary", href, onClick }: Props) {
+export function CtaButton({ children, className, variant = "primary", href, to, onClick }: Props) {
   const base =
     "group inline-flex w-full items-center justify-center gap-2 tap min-h-14 rounded-2xl px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base";
   const variants = {
