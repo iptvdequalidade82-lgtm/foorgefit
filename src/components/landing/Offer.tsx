@@ -2,13 +2,23 @@ import { Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
 import simplesImage from "@/assets/oferta-simples.jpg.asset.json";
+import completoImage from "@/assets/oferta-completo.jpg.asset.json";
+
+import { CHECKOUT_COMPLETO } from "@/lib/checkout";
+
+const CHECKOUT_URL_COMPLETO = CHECKOUT_COMPLETO;
 
 const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
 
-const SIMPLES_ITEMS = [
-  "+200 Planilhas de Treinos",
-  "+275 GIFs Explicativos",
-  "Prescrição para 12 Meses",
+const COMPLETO_ITEMS = [
+  "Guia Prático: Dominando a Fome",
+  "Fichas de Treino",
+  "Emagrecimento Sem Dietas",
+  "Desafio 24 Dias",
+  "Cardápio para comer fora sem sair da dieta",
+  "200 Receitas de Café da Manhã Nutritivas",
+  "80 Receitas de Refeições Saudáveis para Congelar",
+  "+200 Exercícios de Musculação Ilustrado (GIF)",
 ];
 
 const TRUST = [
@@ -57,52 +67,101 @@ export function Offer() {
           </p>
         </Reveal>
 
-        <Reveal
-          delay={120}
-          className="mx-auto mt-14 max-w-xl rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
-        >
-          <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-white">
-            <img
-              src={simplesImage.url}
-              alt="Planilhas de treino do Pacote Simples"
-              loading="lazy"
-              className="aspect-[16/10] w-full object-cover"
-            />
-          </div>
-          <h3 className="display-3">Pacote Simples</h3>
+        <div className="mx-auto mt-14 grid max-w-4xl items-start gap-7 lg:grid-cols-2">
+          {/* Pacote Simples */}
+          <Reveal
+            delay={120}
+            className="rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
+          >
+            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-white">
+              <img
+                src={simplesImage.url}
+                alt="Planilhas de treino do Pacote Simples"
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+            </div>
+            <h3 className="display-3">Pacote Simples</h3>
 
-          <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
-            <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
-              <span className="line-through">R$ 87,00</span>
-              <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
-                93% OFF
-              </span>
-            </p>
-            <p className="price-xl mt-3 text-white">R$ 9,90</p>
-            <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
-              Pagamento único
-            </p>
-          </div>
+            <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
+              <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
+                <span className="line-through">R$ 87,00</span>
+                <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
+                  93% OFF
+                </span>
+              </p>
+              <p className="price-xl mt-3 text-white">R$ 9,90</p>
+              <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
+                Pagamento único
+              </p>
+            </div>
 
-          <ul className="mx-auto mt-8 max-w-xs space-y-3 text-left">
-            {SIMPLES_ITEMS.map((item) => (
-              <Item key={item}>{item}</Item>
-            ))}
-          </ul>
+            <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
+            <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
+              {BONUSES.map((b) => (
+                <Item key={b}>{b}</Item>
+              ))}
+            </ul>
 
-          <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
-          <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
-            {BONUSES.map((b) => (
-              <Item key={b}>{b}</Item>
-            ))}
-          </ul>
+            <CtaButton variant="success" to="/oferta-especial" className="mt-9">
+              SIM, QUERO GARANTIR MEU PACOTE AGORA!
+            </CtaButton>
 
-          <CtaButton variant="success" to="/oferta-especial" className="mt-9">
-            SIM, QUERO GARANTIR MEU PACOTE AGORA!
-          </CtaButton>
+            <TrustRow />
+          </Reveal>
 
-          <TrustRow />
-        </Reveal>
+          {/* Pacote Completo */}
+          <Reveal
+            delay={200}
+            className="relative rounded-2xl border border-primary/50 bg-white/[0.07] p-8 shadow-glow backdrop-blur-sm sm:p-10"
+          >
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md bg-primary px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+              Mais completo
+            </span>
+            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-black">
+              <img
+                src={completoImage.url}
+                alt="Fichas e materiais do Pacote Completo"
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+              />
+            </div>
+            <h3 className="display-3">Pacote Completo</h3>
+
+            <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
+              <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
+                <span className="line-through">R$ 197,00</span>
+                <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
+                  90% OFF
+                </span>
+              </p>
+              <p className="price-xl mt-3 text-white">R$ 19,90</p>
+              <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
+                Pagamento único
+              </p>
+            </div>
+
+            <p className="eyebrow mt-8 text-white/70">Tudo do Pacote Simples +</p>
+            <ul className="mx-auto mt-5 max-w-sm space-y-3 text-left">
+              {COMPLETO_ITEMS.map((b) => (
+                <Item key={b}>{b}</Item>
+              ))}
+            </ul>
+
+            <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
+            <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
+              {BONUSES.map((b) => (
+                <Item key={b}>{b}</Item>
+              ))}
+            </ul>
+
+            <CtaButton variant="success" href={CHECKOUT_URL_COMPLETO} className="mt-9">
+              QUERO O PACOTE COMPLETO POR R$ 19,90
+            </CtaButton>
+
+            <TrustRow />
+          </Reveal>
+        </div>
 
         <p className="mx-auto mt-10 inline-block rounded-xl border border-white/15 px-6 py-3.5 font-sans text-sm font-medium text-white/75">
           + 2.347 pessoas já transformaram suas vidas!
