@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { trackViewContent } from "@/lib/pixel";
 
-import { Hero } from "@/components/landing/Hero";
+
 import { Intro } from "@/components/landing/Intro";
 import { Features } from "@/components/landing/Features";
 import { Bonus } from "@/components/landing/Bonus";
