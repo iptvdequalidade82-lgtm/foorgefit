@@ -12,6 +12,7 @@ import { Offer } from "@/components/landing/Offer";
 import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
+import { CtaButton } from "@/components/landing/CtaButton";
 
 const TITLE = "+200 Planilhas de Treino Prontas para o Seu Biotipo";
 const DESCRIPTION =
@@ -44,14 +45,27 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <Hero onCta={scrollToOffer} />
+      <Offer />
       <Intro />
       <Features />
       <Bonus />
       <Steps />
       <Testimonials />
-      <Offer />
       <Trust />
       <Faq />
+      <section className="section-deep">
+        <div className="container-page py-14 text-center">
+          <h2 className="display-3">Pronto para começar?</h2>
+          <p className="mx-auto mt-4 max-w-md font-sans text-sm leading-relaxed text-white/65">
+            Escolha o seu pacote e receba o acesso no seu email logo após a compra.
+          </p>
+          <div className="mx-auto mt-7 max-w-sm">
+            <CtaButton variant="success" onClick={scrollToOffer}>
+              VER AS OFERTAS
+            </CtaButton>
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   );
