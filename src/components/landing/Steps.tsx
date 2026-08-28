@@ -8,8 +8,8 @@ const STEPS = [
   },
   {
     n: "2",
-    title: "Receba no seu Whatsapp e Email",
-    text: "Enviaremos para o seu whatsapp e email as instruções de como acessar seu novo material",
+    title: "Receba no seu Email",
+    text: "Enviaremos para o seu email as instruções de como acessar seu novo material",
   },
   {
     n: "3",
@@ -26,7 +26,7 @@ export function Steps() {
           <h2 className="display-2 stack-head">Como Tenho Acesso ao Material?</h2>
           <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/70">
             Após realizar o seu pedido e o pagamento você irá receber seu acesso diretamente no seu
-            whatsapp e no seu email.
+            email.
           </p>
         </Reveal>
 

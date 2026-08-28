@@ -31,9 +31,9 @@ const FAQS = [
     q: "Como receberei o conteúdo?",
     a: (
       <p>
-        Após a confirmação do pagamento, você receberá o seu acesso diretamente no seu whatsapp e no
-        seu email, disponibilidade imediata. Poderá acessá-los no seu celular, tablet ou computador
-        a qualquer momento!
+        Após a confirmação do pagamento, você receberá o seu acesso diretamente no seu email, com
+        disponibilidade imediata. Poderá acessá-los no seu celular, tablet ou computador a qualquer
+        momento!
       </p>
     ),
   },
