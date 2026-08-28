@@ -12,6 +12,7 @@ import { Offer } from "@/components/landing/Offer";
 import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
+import { CtaButton } from "@/components/landing/CtaButton";
 
 const TITLE = "+200 Planilhas de Treino Prontas para o Seu Biotipo";
 const DESCRIPTION =
