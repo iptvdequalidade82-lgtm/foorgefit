@@ -67,7 +67,7 @@ export function Offer() {
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 items-start gap-3 sm:gap-7 lg:mt-14">
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 items-start gap-6 sm:grid-cols-2 sm:gap-7 lg:mt-14">
           {/* Pacote Simples */}
           <Reveal
             delay={120}
