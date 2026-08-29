@@ -67,11 +67,11 @@ export function Offer() {
           </p>
         </Reveal>
 
-        <div className="mx-auto mt-14 grid max-w-4xl items-start gap-7 lg:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 items-start gap-3 sm:gap-7 lg:mt-14">
           {/* Pacote Simples */}
           <Reveal
             delay={120}
-            className="rounded-2xl border border-white/12 bg-white/[0.05] p-8 backdrop-blur-sm sm:p-10"
+            className="rounded-2xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-sm sm:p-8 lg:p-10"
           >
             <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-white">
               <img
@@ -113,7 +113,7 @@ export function Offer() {
           {/* Pacote Completo */}
           <Reveal
             delay={200}
-            className="relative rounded-2xl border border-primary/50 bg-white/[0.07] p-8 shadow-glow backdrop-blur-sm sm:p-10"
+            className="relative rounded-2xl border border-primary/50 bg-white/[0.07] p-4 shadow-glow backdrop-blur-sm sm:p-8 lg:p-10"
           >
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md bg-primary px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-white">
               Mais completo
