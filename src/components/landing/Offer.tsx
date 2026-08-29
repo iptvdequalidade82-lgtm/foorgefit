@@ -43,7 +43,7 @@ function TrustRow() {
 
 function Item({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-2.5 font-sans text-sm text-white/85">
+    <li className="flex items-start gap-2 font-sans text-[12px] leading-snug text-white/85 sm:gap-2.5 sm:text-sm">
       <span className="mt-0.5 grid h-4.5 w-4.5 shrink-0 place-items-center rounded-full bg-primary/25">
         <Check className="h-2.5 w-2.5 text-primary" />
       </span>
@@ -73,7 +73,7 @@ export function Offer() {
             delay={120}
             className="rounded-2xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-sm sm:p-8 lg:p-10"
           >
-            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-white">
+            <div className="mb-4 overflow-hidden sm:mb-7 rounded-xl border border-white/10 bg-white">
               <img
                 src={simplesImage.url}
                 alt="Planilhas de treino do Pacote Simples"
@@ -83,7 +83,7 @@ export function Offer() {
             </div>
             <h3 className="display-3">Pacote Simples</h3>
 
-            <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
+            <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-5 sm:mt-7 sm:px-6 sm:py-8">
               <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
                 <span className="line-through">R$ 87,00</span>
                 <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
@@ -96,14 +96,14 @@ export function Offer() {
               </p>
             </div>
 
-            <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
-            <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
+            <p className="eyebrow mt-6 text-white/70 sm:mt-8">+ 3 Bônus Grátis</p>
+            <ul className="mx-auto mt-4 max-w-xs space-y-2.5 text-left sm:mt-5 sm:space-y-3">
               {BONUSES.map((b) => (
                 <Item key={b}>{b}</Item>
               ))}
             </ul>
 
-            <CtaButton variant="success" to="/oferta-especial" className="mt-9">
+            <CtaButton variant="success" to="/oferta-especial" className="mt-6 sm:mt-9">
               SIM, QUERO GARANTIR MEU PACOTE AGORA!
             </CtaButton>
 
@@ -118,7 +118,7 @@ export function Offer() {
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md bg-primary px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-white">
               Mais completo
             </span>
-            <div className="mb-7 overflow-hidden rounded-xl border border-white/10 bg-black">
+            <div className="mb-4 overflow-hidden sm:mb-7 rounded-xl border border-white/10 bg-black">
               <img
                 src={completoImage.url}
                 alt="Fichas e materiais do Pacote Completo"
@@ -128,7 +128,7 @@ export function Offer() {
             </div>
             <h3 className="display-3">Pacote Completo</h3>
 
-            <div className="mt-7 rounded-xl border border-white/10 bg-white/[0.06] px-6 py-8">
+            <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-5 sm:mt-7 sm:px-6 sm:py-8">
               <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
                 <span className="line-through">R$ 197,00</span>
                 <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
@@ -141,21 +141,21 @@ export function Offer() {
               </p>
             </div>
 
-            <p className="eyebrow mt-8 text-white/70">Tudo do Pacote Simples +</p>
-            <ul className="mx-auto mt-5 max-w-sm space-y-3 text-left">
+            <p className="eyebrow mt-6 text-white/70 sm:mt-8">Tudo do Pacote Simples +</p>
+            <ul className="mx-auto mt-4 max-w-sm space-y-2.5 text-left sm:mt-5 sm:space-y-3">
               {COMPLETO_ITEMS.map((b) => (
                 <Item key={b}>{b}</Item>
               ))}
             </ul>
 
-            <p className="eyebrow mt-8 text-white/70">+ 3 Bônus Grátis</p>
-            <ul className="mx-auto mt-5 max-w-xs space-y-3 text-left">
+            <p className="eyebrow mt-6 text-white/70 sm:mt-8">+ 3 Bônus Grátis</p>
+            <ul className="mx-auto mt-4 max-w-xs space-y-2.5 text-left sm:mt-5 sm:space-y-3">
               {BONUSES.map((b) => (
                 <Item key={b}>{b}</Item>
               ))}
             </ul>
 
-            <CtaButton variant="success" href={CHECKOUT_URL_COMPLETO} className="mt-9">
+            <CtaButton variant="success" href={CHECKOUT_URL_COMPLETO} className="mt-6 sm:mt-9">
               QUERO O PACOTE COMPLETO POR R$ 19,90
             </CtaButton>
 
