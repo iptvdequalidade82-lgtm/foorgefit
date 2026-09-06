@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { trackViewContent } from "@/lib/pixel";
 
 
+import { Hero } from "@/components/landing/Hero";
 import { Intro } from "@/components/landing/Intro";
 import { Features } from "@/components/landing/Features";
 import { Bonus } from "@/components/landing/Bonus";
@@ -44,13 +45,13 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-background">
-      <Offer />
-
+      <Hero onCta={scrollToOffer} />
       <Intro />
       <Features />
       <Bonus />
       <Steps />
       <Testimonials />
+      <Offer />
       <Trust />
       <Faq />
       <section className="section-deep">
