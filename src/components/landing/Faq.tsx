@@ -30,11 +30,20 @@ const FAQS = [
   {
     q: "Como receberei o conteúdo?",
     a: (
-      <p>
-        Após a confirmação do pagamento, você receberá o seu acesso diretamente no seu email, com
-        disponibilidade imediata. Poderá acessá-los no seu celular, tablet ou computador a qualquer
-        momento!
-      </p>
+      <div className="space-y-3">
+        <p>
+          Após a confirmação do pagamento, você receberá um e-mail com o link do Google Drive e as
+          instruções de acesso.
+        </p>
+        <p>
+          É só clicar no link, solicitar acesso ao drive e, assim que aceitarmos — ou
+          automaticamente, dependendo do pacote — você já poderá acessar todo o material.
+        </p>
+        <p>
+          Você pode usar no celular, tablet ou computador. No celular, recomendamos ter o app do
+          Google Drive instalado para facilitar ainda mais.
+        </p>
+      </div>
     ),
   },
   {
