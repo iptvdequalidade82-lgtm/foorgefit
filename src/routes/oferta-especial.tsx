@@ -5,6 +5,8 @@ import { CtaButton } from "@/components/landing/CtaButton";
 import { Reveal } from "@/components/landing/Reveal";
 import { trackViewContent, trackInitiateCheckout } from "@/lib/pixel";
 import { CHECKOUT_SIMPLES, CHECKOUT_COMPLETO_DESCONTO } from "@/lib/checkout";
+import { useTrackedUrl } from "@/hooks/use-tracking-params";
+
 import completoImage from "@/assets/oferta-completo.jpg.asset.json";
 
 const TITLE = "Oferta Especial: Pacote Completo por R$ 15,90";
