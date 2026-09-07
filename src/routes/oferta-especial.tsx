@@ -48,9 +48,12 @@ const TRUST = [
 ];
 
 function OfertaEspecial() {
+  const simplesHref = useTrackedUrl(CHECKOUT_SIMPLES);
+
   useEffect(() => {
     trackViewContent();
   }, []);
+
 
   return (
     <main className="min-h-screen bg-background">
