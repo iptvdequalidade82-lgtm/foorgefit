@@ -119,7 +119,7 @@ function OfertaEspecial() {
             </CtaButton>
 
             <a
-              href={CHECKOUT_SIMPLES}
+              href={simplesHref}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackInitiateCheckout()}
