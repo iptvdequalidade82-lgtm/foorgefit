@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 import { trackInitiateCheckout } from "@/lib/pixel";
+import { useTrackedUrl, useTrackingParams } from "@/hooks/use-tracking-params";
+
 
 
 type Props = {
@@ -13,6 +15,8 @@ type Props = {
 };
 
 export function CtaButton({ children, className, variant = "primary", href, to, onClick }: Props) {
+  const trackingParams = useTrackingParams();
+  const trackedHref = useTrackedUrl(href ?? "");
   const base =
     "group inline-flex w-full items-center justify-center gap-2 tap min-h-14 rounded-2xl px-7 py-4 text-center font-display text-[0.95rem] font-extrabold uppercase leading-tight tracking-[0.01em] transition-[transform,background-color,box-shadow] duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:text-base";
   const variants = {
@@ -26,7 +30,7 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
 
   if (to) {
     return (
-      <Link to={to} className={classes} onClick={() => onClick?.()}>
+      <Link to={to} search={trackingParams} className={classes} onClick={() => onClick?.()}>
         {children}
       </Link>
     );
@@ -35,7 +39,7 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
   if (href) {
     return (
       <a
-        href={href}
+        href={trackedHref}
         target="_blank"
         rel="noopener noreferrer"
         className={classes}
@@ -48,6 +52,7 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
       </a>
     );
   }
+
 
   return (
     <button type="button" onClick={onClick} className={classes}>
