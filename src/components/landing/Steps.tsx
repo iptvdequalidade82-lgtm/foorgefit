@@ -3,18 +3,18 @@ import { Reveal } from "./Reveal";
 const STEPS = [
   {
     n: "1",
-    title: "Faça o Pedido do Material",
-    text: "No final da pagina acesse a opção comprar para abrir o pedido e efetuar a compra",
+    title: "Faça a Compra",
+    text: "Escolha o seu pacote e finalize o pagamento de forma segura. Você receberá tudo por e-mail.",
   },
   {
     n: "2",
-    title: "Receba no seu Email",
-    text: "Enviaremos para o seu email as instruções de como acessar seu novo material",
+    title: "Peça Acesso ao Google Drive",
+    text: "Dentro do e-mail terá o link do Google Drive. É só clicar e solicitar acesso ao material.",
   },
   {
     n: "3",
-    title: "Pagamento Único e Acesso Vitalício",
-    text: "Sem taxas ou pegadinhas, pagamento único e acesso liberado para sempre",
+    title: "Acesso Liberado na Hora",
+    text: "Assim que aceitarmos o seu pedido — ou automaticamente — você já terá acesso a todo o conteúdo para sempre.",
   },
 ];
 
@@ -25,8 +25,8 @@ export function Steps() {
         <Reveal>
           <h2 className="display-2 stack-head">Como Tenho Acesso ao Material?</h2>
           <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/70">
-            Após realizar o seu pedido e o pagamento você irá receber seu acesso diretamente no seu
-            email.
+            É simples e rápido: você compra, recebe o e-mail e acessa tudo pelo Google Drive.
+            Não precisa baixar nada no seu celular, basta ter o app do Drive instalado.
           </p>
         </Reveal>
 
