@@ -10,6 +10,7 @@ import { Bonus } from "@/components/landing/Bonus";
 import { Steps } from "@/components/landing/Steps";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Offer } from "@/components/landing/Offer";
+import { Guarantee } from "@/components/landing/Guarantee";
 import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
@@ -52,6 +53,7 @@ function Index() {
       <Steps />
       <Testimonials />
       <Offer />
+      <Guarantee />
       <Trust />
       <Faq />
       <section className="section-deep">
