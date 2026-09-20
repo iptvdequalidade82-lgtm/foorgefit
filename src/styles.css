@@ -144,7 +144,7 @@ aside:has(a[href*="lovable.dev"]) {
   color: var(--foreground);
 }
 
-/* Ember band: black with subtle orange wash */
+/* Deep ForgeFit product band */
 @utility section-emerald {
   background:
     radial-gradient(120% 80% at 50% 0%, oklch(0.686 0.221 42 / 0.14), transparent 62%),
