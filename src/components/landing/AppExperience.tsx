@@ -1,7 +1,6 @@
 import {
   CalendarDays,
   Check,
-  ChevronRight,
   Download,
   Dumbbell,
   Heart,
@@ -13,7 +12,6 @@ import {
 import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import recommendationImage from "@/assets/forgefit-recomendacao.png.asset.json";
 import executionsImage from "@/assets/forgefit-execucoes.png.asset.json";
-import recommendedWorkoutImage from "@/assets/forgefit-treino-recomendado.png.asset.json";
 import demoVideo from "@/assets/forgefit-demonstracao.mp4.asset.json";
 import { Reveal } from "./Reveal";
 
@@ -158,24 +156,6 @@ export function AppExperience() {
         </div>
       </section>
 
-      <section className="section-light section-pad">
-        <div className="container-page">
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow text-primary">Biblioteca inteligente</p>
-            <h2 className="display-2 mt-4">Centenas de exercícios dentro do app</h2>
-            <p className="lead mx-auto mt-5 max-w-2xl">Pesquise por grupo muscular, nível, equipamento e local. Veja o movimento e adicione ao seu treino.</p>
-          </Reveal>
-          <div className="mx-auto mt-10 grid max-w-5xl items-start gap-5 lg:grid-cols-2">
-            <Reveal delay={80}>
-              <AppScreenshot src={executionsImage.url} alt="Biblioteca real de exercícios do ForgeFit com busca e filtros" />
-            </Reveal>
-            <Reveal delay={140}>
-              <AppScreenshot src={recommendedWorkoutImage.url} alt="Treino recomendado no ForgeFit com séries, repetições e descanso" />
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad bg-background">
         <div className="container-page">
           <div className="grid gap-5 md:grid-cols-2">
@@ -205,22 +185,6 @@ export function AppExperience() {
         </div>
       </section>
 
-      <section className="section-light section-pad-sm">
-        <div className="container-page">
-          <Reveal className="app-panel grid gap-7 p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="eyebrow text-primary">Um app completo. Sem assinatura.</p>
-              <h2 className="display-2 mt-4">Pague uma vez. Use sempre.</h2>
-              <p className="lead mt-4 max-w-xl">Sem mensalidade, renovação ou cobrança recorrente. Seu acesso ao ForgeFit é vitalício.</p>
-            </div>
-            <div className="min-w-64 rounded-lg border border-primary/35 bg-primary/10 p-6 text-center">
-              <p className="text-xs font-bold uppercase text-primary">Pagamento único</p>
-              <p className="mt-3 font-display text-5xl font-extrabold">R$ 19,90</p>
-              <p className="mt-3 text-sm font-bold">∞ ACESSO VITALÍCIO</p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
     </>
   );
 }
