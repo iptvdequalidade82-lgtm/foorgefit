@@ -4,6 +4,7 @@ import { ArrowRight, Check, Infinity, Lock, Mail, ShieldCheck, Smartphone } from
 import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import recommendationImage from "@/assets/forgefit-recomendacao.png.asset.json";
 import executionsImage from "@/assets/forgefit-execucoes.png.asset.json";
+import { BrandLogo } from "@/components/landing/BrandLogo";
 import { CtaButton } from "@/components/landing/CtaButton";
 import { Reveal } from "@/components/landing/Reveal";
 import { trackInitiateCheckout, trackViewContent } from "@/lib/pixel";
@@ -52,6 +53,9 @@ function OfertaEspecial() {
         Oferta exibida somente nesta etapa
       </div>
       <section className="container-page py-10 sm:py-16">
+        <a href="/" className="mx-auto mb-8 block w-40" aria-label="Voltar ao início do ForgeFit">
+          <BrandLogo />
+        </a>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-primary">Antes de continuar...</p>
           <h1 className="display-2 mt-4">Por apenas R$ 6 a mais, você pode levar o ForgeFit App.</h1>

@@ -13,6 +13,8 @@ import {
 import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import recommendationImage from "@/assets/forgefit-recomendacao.png.asset.json";
 import executionsImage from "@/assets/forgefit-execucoes.png.asset.json";
+import recommendedWorkoutImage from "@/assets/forgefit-treino-recomendado.png.asset.json";
+import demoVideo from "@/assets/forgefit-demonstracao.mp4.asset.json";
 import { Reveal } from "./Reveal";
 
 const DAYS = [
@@ -60,6 +62,21 @@ export function AppExperience() {
             <p className="lead mx-auto mt-5 max-w-2xl">
               Escolha músculos, exercícios, equipamentos, ordem, séries, repetições e descanso. O ForgeFit se adapta à sua rotina.
             </p>
+          </Reveal>
+
+          <Reveal delay={80} className="mx-auto mt-10 max-w-sm">
+            <div className="app-window overflow-hidden border-primary/30 bg-card">
+              <video
+                src={demoVideo.url}
+                poster={dashboardImage.url}
+                controls
+                playsInline
+                preload="metadata"
+                className="aspect-[9/16] w-full bg-background object-cover"
+                aria-label="Demonstração em vídeo do aplicativo ForgeFit"
+              />
+            </div>
+            <p className="mt-3 text-center text-xs font-semibold text-muted-foreground">Veja o ForgeFit funcionando na prática</p>
           </Reveal>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-[0.86fr_1.14fr]">
@@ -148,9 +165,14 @@ export function AppExperience() {
             <h2 className="display-2 mt-4">Centenas de exercícios dentro do app</h2>
             <p className="lead mx-auto mt-5 max-w-2xl">Pesquise por grupo muscular, nível, equipamento e local. Veja o movimento e adicione ao seu treino.</p>
           </Reveal>
-          <Reveal delay={80} className="mx-auto mt-10 max-w-5xl">
-            <AppScreenshot src={recommendationImage.url} alt="Tela real de recomendação e personalização do ForgeFit" />
-          </Reveal>
+          <div className="mx-auto mt-10 grid max-w-5xl items-start gap-5 lg:grid-cols-2">
+            <Reveal delay={80}>
+              <AppScreenshot src={executionsImage.url} alt="Biblioteca real de exercícios do ForgeFit com busca e filtros" />
+            </Reveal>
+            <Reveal delay={140}>
+              <AppScreenshot src={recommendedWorkoutImage.url} alt="Treino recomendado no ForgeFit com séries, repetições e descanso" />
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import recommendationImage from "@/assets/forgefit-recomendacao.png.asset.json";
 import executionsImage from "@/assets/forgefit-execucoes.png.asset.json";
 import { Button } from "@/components/ui/button";
+import { BrandLogo } from "./BrandLogo";
 import { Reveal } from "./Reveal";
 
 export function Hero({ onCta }: { onCta: () => void }) {
@@ -12,9 +13,8 @@ export function Hero({ onCta }: { onCta: () => void }) {
     <section className="hero-grid relative overflow-hidden border-b border-border pb-16 pt-7 sm:pb-24 sm:pt-10">
       <div className="container-page relative">
         <div className="flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 font-display text-sm font-extrabold" aria-label="ForgeFit início">
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-primary text-xs font-black text-primary-foreground">F</span>
-            FORGEFIT
+          <a href="#top" className="block w-36 sm:w-44" aria-label="ForgeFit início">
+            <BrandLogo />
           </a>
           <span className="hidden items-center gap-2 text-xs font-semibold text-muted-foreground sm:flex">
             <Infinity className="h-4 w-4 text-primary" /> Acesso vitalício
