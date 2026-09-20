@@ -1,51 +1,32 @@
+import { MailCheck } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const STEPS = [
-  {
-    n: "1",
-    title: "Faça a Compra",
-    text: "Escolha o seu pacote e finalize o pagamento de forma segura. Você receberá tudo por e-mail.",
-  },
-  {
-    n: "2",
-    title: "Peça Acesso ao Google Drive",
-    text: "Dentro do e-mail terá o link do Google Drive. É só clicar e solicitar acesso ao material.",
-  },
-  {
-    n: "3",
-    title: "Acesso Liberado na Hora",
-    text: "Assim que aceitarmos o seu pedido — ou automaticamente — você já terá acesso a todo o conteúdo para sempre.",
-  },
+  ["1", "Finalize sua compra", "Escolha o Pacote Completo Digital ou o ForgeFit App e conclua o pagamento."],
+  ["2", "Aguarde a confirmação", "Assim que o pagamento for confirmado, preparamos as instruções da opção escolhida."],
+  ["3", "Confira seu e-mail", "O acesso é enviado para o mesmo e-mail informado no momento da compra."],
+  ["4", "Comece a utilizar", "No app, siga as instruções de entrada. No pacote digital, use o link recebido para solicitar acesso ao Google Drive."],
 ];
 
 export function Steps() {
   return (
-    <section className="section-emerald section-pad">
+    <section className="section-light section-pad">
       <div className="container-page text-center">
         <Reveal>
-          <h2 className="display-2 stack-head">Como Tenho Acesso ao Material?</h2>
-          <p className="mx-auto mt-6 max-w-2xl font-sans text-base leading-relaxed text-white/70">
-            É simples e rápido: você compra, recebe o e-mail e acessa tudo pelo Google Drive.
-            Não precisa baixar nada no seu celular, basta ter o app do Drive instalado.
-          </p>
+          <MailCheck className="mx-auto h-8 w-8 text-primary" />
+          <h2 className="display-2 mt-5">Como recebo meu acesso?</h2>
+          <p className="lead mx-auto mt-5 max-w-2xl">Todo o processo começa pelo e-mail utilizado na compra.</p>
         </Reveal>
-
-        <div className="mt-14 grid gap-7 md:grid-cols-3">
-          {STEPS.map((s, i) => (
-            <Reveal
-              key={s.n}
-              delay={i * 90}
-              as="article"
-              className="rounded-2xl border border-white/12 bg-white/[0.06] p-8 text-left backdrop-blur-sm transition-colors duration-300 hover:border-white/30"
-            >
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-primary/15 ring-1 ring-primary/35 font-display text-base font-extrabold text-primary">
-                {s.n}
-              </span>
-              <h3 className="display-3 mt-6">{s.title}</h3>
-              <p className="mt-3 font-sans text-sm leading-relaxed text-white/70">{s.text}</p>
+        <div className="mt-12 grid gap-4 md:grid-cols-4">
+          {STEPS.map(([number, title, text], index) => (
+            <Reveal key={number} delay={index * 60} className="app-panel p-6 text-left">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-primary font-display font-extrabold text-primary-foreground">{number}</span>
+              <h3 className="mt-5 font-display text-base font-extrabold">{title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
             </Reveal>
           ))}
         </div>
+        <p className="mx-auto mt-8 max-w-xl rounded-lg border border-primary/25 bg-primary/10 px-5 py-4 text-sm font-bold">IMPORTANTE: confira se o e-mail informado está correto.</p>
       </div>
     </section>
   );

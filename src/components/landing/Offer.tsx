@@ -1,171 +1,90 @@
-import { Check, Lock, ShieldCheck, Smartphone, Zap } from "lucide-react";
+import { Check, FileText, Infinity, Lock, Mail, ShieldCheck, Smartphone } from "lucide-react";
+import completoImage from "@/assets/oferta-completo.jpg.asset.json";
+import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
-import simplesImage from "@/assets/oferta-simples.jpg.asset.json";
-import completoImage from "@/assets/oferta-completo.jpg.asset.json";
+import { CHECKOUT_FORGEFIT } from "@/lib/checkout";
 
-import { CHECKOUT_COMPLETO } from "@/lib/checkout";
-
-const CHECKOUT_URL_COMPLETO = CHECKOUT_COMPLETO;
-
-const BONUSES = ["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"];
-
-const COMPLETO_ITEMS = [
+const DIGITAL_ITEMS = [
+  "+200 planilhas de treino",
   "Guia Prático: Dominando a Fome",
-  "Fichas de Treino",
+  "Fichas de treino",
   "Emagrecimento Sem Dietas",
-  "Desafio 24 Dias",
   "Cardápio para comer fora sem sair da dieta",
   "200 Receitas de Café da Manhã Nutritivas",
   "80 Receitas de Refeições Saudáveis para Congelar",
-  "+200 Exercícios de Musculação Ilustrado (GIF)",
+  "+200 Exercícios de Musculação Ilustrados em GIF",
+  "500 Receitas Low Carb",
+  "300 Receitas Anabólicas",
+  "100 Receitas Saudáveis Fit",
 ];
 
-const TRUST = [
-  { icon: Lock, label: "Compra segura" },
-  { icon: Zap, label: "Acesso imediato" },
-  { icon: ShieldCheck, label: "Pagamento protegido" },
-  { icon: Smartphone, label: "Compatível com celular" },
+const APP_ITEMS = [
+  "Aplicativo completo",
+  "Monte sua própria semana",
+  "Escolha músculos, exercícios e equipamentos",
+  "+300 execuções explicativas",
+  "Receitas dentro do app",
+  "Desafio ForgeFit de 4 dias",
+  "Favoritos e downloads",
+  "Acesso vitalício",
 ];
 
-function TrustRow() {
-  return (
-    <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 font-sans text-[11px] font-medium text-white/60">
-      {TRUST.map(({ icon: Icon, label }) => (
-        <li key={label} className="flex items-center gap-1.5">
-          <Icon className="h-3.5 w-3.5 shrink-0 text-primary" />
-          {label}
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function Item({ children }: { children: React.ReactNode }) {
-  return (
-    <li className="flex items-start gap-2 font-sans text-[12px] leading-snug text-white/85 sm:gap-2.5 sm:text-sm">
-      <span className="mt-0.5 grid h-4.5 w-4.5 shrink-0 place-items-center rounded-full bg-primary/25">
-        <Check className="h-2.5 w-2.5 text-primary" />
-      </span>
-      <span className="min-w-0">{children}</span>
-    </li>
-  );
+function OfferItem({ children }: { children: React.ReactNode }) {
+  return <li className="flex items-start gap-2.5 text-sm leading-snug text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" /><span>{children}</span></li>;
 }
 
 export function Offer() {
   return (
-    <section id="oferta" className="section-deep scroll-mt-4">
-      <div className="bg-cta py-3.5 text-center">
-        <p className="eyebrow text-white">Oferta Especial Por Tempo Limitado!</p>
-      </div>
-
-      <div className="container-page section-pad text-center">
-        <Reveal>
-          <h2 className="display-2 stack-head">Pacote: +200 Planilhas de Treinos</h2>
-          <p className="mx-auto mt-5 max-w-xl font-sans text-base leading-relaxed text-white/65">
-            Pare de perder tempo! Saiba exatamente o que seguir e quais os melhores exercícios.
-          </p>
+    <section id="oferta" className="section-pad bg-background scroll-mt-6">
+      <div className="container-page">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow text-primary">Escolha sua experiência</p>
+          <h2 className="display-2 mt-4">Comece hoje com pagamento único</h2>
+          <p className="lead mx-auto mt-5 max-w-2xl">Conteúdo digital para consultar ou um aplicativo completo para montar e organizar sua rotina.</p>
         </Reveal>
 
-        <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 items-start gap-6 sm:grid-cols-2 sm:gap-7 lg:mt-14">
-          {/* Pacote Simples */}
-          <Reveal
-            delay={120}
-            className="rounded-2xl border border-white/12 bg-white/[0.05] p-4 backdrop-blur-sm sm:p-8 lg:p-10"
-          >
-            <div className="mb-4 overflow-hidden sm:mb-7 rounded-xl border border-white/10 bg-white">
-              <img
-                src={simplesImage.url}
-                alt="Planilhas de treino do Pacote Simples"
-                loading="lazy"
-                className="aspect-[16/10] w-full object-cover"
-              />
+        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-6 lg:grid-cols-2">
+          <Reveal className="offer-card p-5 sm:p-8">
+            <div className="overflow-hidden rounded-lg border border-border bg-white">
+              <img src={completoImage.url} alt="Conteúdos do Pacote Completo Digital" loading="lazy" className="aspect-[16/9] w-full object-cover" />
             </div>
-            <h3 className="display-3">Pacote Simples</h3>
-
-            <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-5 sm:mt-7 sm:px-6 sm:py-8">
-              <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
-                <span className="line-through">R$ 87,00</span>
-                <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
-                  93% OFF
-                </span>
-              </p>
-              <p className="price-xl mt-3 text-white">R$ 9,90</p>
-              <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
-                Pagamento único
-              </p>
+            <div className="mt-7 flex items-start justify-between gap-4">
+              <div><p className="eyebrow text-muted-foreground">Conteúdo digital completo</p><h3 className="display-3 mt-2">Pacote Completo</h3></div>
+              <FileText className="h-6 w-6 shrink-0 text-primary" />
             </div>
-
-            <p className="eyebrow mt-6 text-white/70 sm:mt-8">+ 3 Bônus Grátis</p>
-            <ul className="mx-auto mt-4 max-w-xs space-y-2.5 text-left sm:mt-5 sm:space-y-3">
-              {BONUSES.map((b) => (
-                <Item key={b}>{b}</Item>
-              ))}
-            </ul>
-
-            <CtaButton variant="success" to="/oferta-especial" className="mt-6 sm:mt-9">
-              SIM, QUERO GARANTIR MEU PACOTE AGORA!
-            </CtaButton>
-
-            <TrustRow />
+            <p className="mt-6 font-display text-5xl font-extrabold">R$ 9,90</p>
+            <p className="mt-2 text-xs font-semibold uppercase text-muted-foreground">Pagamento único</p>
+            <div className="mt-5 rounded-lg border border-border bg-white/[0.03] p-4 text-sm text-foreground/75">
+              Materiais prontos para consultar. <strong className="text-foreground">Não inclui acesso ao ForgeFit App.</strong>
+            </div>
+            <ul className="mt-6 space-y-3">{DIGITAL_ITEMS.map((item) => <OfferItem key={item}>{item}</OfferItem>)}</ul>
+            <CtaButton to="/oferta-especial" className="mt-8">QUERO O PACOTE DE R$ 9,90</CtaButton>
+            <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground"><Mail className="h-4 w-4 text-primary" /> Acesso aos materiais enviado por e-mail.</p>
           </Reveal>
 
-          {/* Pacote Completo */}
-          <Reveal
-            delay={200}
-            className="relative rounded-2xl border border-primary/50 bg-white/[0.07] p-4 shadow-glow backdrop-blur-sm sm:p-8 lg:p-10"
-          >
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-md bg-primary px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-white">
-              Mais completo
-            </span>
-            <div className="mb-4 overflow-hidden sm:mb-7 rounded-xl border border-white/10 bg-black">
-              <img
-                src={completoImage.url}
-                alt="Fichas e materiais do Pacote Completo"
-                loading="lazy"
-                className="aspect-[16/10] w-full object-cover"
-              />
+          <Reveal delay={100} className="offer-card offer-card-featured relative p-5 sm:p-8">
+            <span className="absolute right-4 top-4 rounded-md bg-primary px-2.5 py-1 text-[10px] font-extrabold uppercase text-primary-foreground">Mais completo</span>
+            <div className="overflow-hidden rounded-lg border border-primary/25 bg-background">
+              <img src={dashboardImage.url} alt="Aplicativo ForgeFit" loading="lazy" className="aspect-[16/9] w-full object-cover object-top" />
             </div>
-            <h3 className="display-3">Pacote Completo</h3>
-
-            <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-5 sm:mt-7 sm:px-6 sm:py-8">
-              <p className="flex items-center justify-center gap-2.5 font-sans text-xs font-medium text-white/60">
-                <span className="line-through">R$ 197,00</span>
-                <span className="rounded bg-white/12 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-white">
-                  90% OFF
-                </span>
-              </p>
-              <p className="price-xl mt-3 text-white">R$ 19,90</p>
-              <p className="mt-2 font-sans text-xs font-medium uppercase tracking-[0.18em] text-white/55">
-                Pagamento único
-              </p>
+            <div className="mt-7 flex items-start justify-between gap-4">
+              <div><p className="eyebrow text-primary">Experiência ForgeFit</p><h3 className="display-3 mt-2">ForgeFit App</h3></div>
+              <Smartphone className="mr-28 h-6 w-6 shrink-0 text-primary sm:mr-32" />
             </div>
-
-            <p className="eyebrow mt-6 text-white/70 sm:mt-8">Tudo do Pacote Simples +</p>
-            <ul className="mx-auto mt-4 max-w-sm space-y-2.5 text-left sm:mt-5 sm:space-y-3">
-              {COMPLETO_ITEMS.map((b) => (
-                <Item key={b}>{b}</Item>
-              ))}
-            </ul>
-
-            <p className="eyebrow mt-6 text-white/70 sm:mt-8">+ 3 Bônus Grátis</p>
-            <ul className="mx-auto mt-4 max-w-xs space-y-2.5 text-left sm:mt-5 sm:space-y-3">
-              {BONUSES.map((b) => (
-                <Item key={b}>{b}</Item>
-              ))}
-            </ul>
-
-            <CtaButton variant="success" href={CHECKOUT_URL_COMPLETO} className="mt-6 sm:mt-9">
-              QUERO O PACOTE COMPLETO POR R$ 19,90
-            </CtaButton>
-
-            <TrustRow />
+            <p className="mt-6 font-display text-5xl font-extrabold">R$ 19,90</p>
+            <p className="mt-2 text-xs font-semibold uppercase text-muted-foreground">Pagamento único • sem mensalidade</p>
+            <div className="mt-5 flex items-center gap-3 rounded-lg border border-primary/30 bg-primary/10 p-4 text-sm font-bold"><Infinity className="h-5 w-5 text-primary" /> Acesso vitalício ao aplicativo</div>
+            <ul className="mt-6 space-y-3">{APP_ITEMS.map((item) => <OfferItem key={item}>{item}</OfferItem>)}</ul>
+            <CtaButton href={CHECKOUT_FORGEFIT} className="mt-8">QUERO ACESSO AO APP</CtaButton>
+            <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground"><Mail className="h-4 w-4 text-primary" /> Instruções enviadas por e-mail após a confirmação.</p>
           </Reveal>
         </div>
 
-        <p className="mx-auto mt-10 inline-block rounded-xl border border-white/15 px-6 py-3.5 font-sans text-sm font-medium text-white/75">
-          + 2.347 pessoas já transformaram suas vidas!
-        </p>
+        <div className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-3 text-xs font-semibold text-muted-foreground">
+          <span className="flex items-center gap-2"><Lock className="h-4 w-4 text-primary" /> Compra segura</span>
+          <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> Pagamento protegido</span>
+        </div>
       </div>
     </section>
   );

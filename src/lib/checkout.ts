@@ -1,8 +1,11 @@
-export const CHECKOUT_SIMPLES =
+export const CHECKOUT_PACOTE_DIGITAL =
   "https://pay.sunize.com.br/uIQOAFXG#643fa065-1d6d-4073-83d8-ec29dbf797c8";
 
-export const CHECKOUT_COMPLETO =
-  "https://pay.sunize.com.br/fGkFdGKA#9f291465-20d2-4706-b213-ae47eaa893b8";
+export const CHECKOUT_FORGEFIT = "https://pay.sunize.com.br/tmnfZDHS";
 
-// Oferta de cross-sell: Pacote Completo com desconto por R$ 15,90.
-export const CHECKOUT_COMPLETO_DESCONTO = "https://pay.sunize.com.br/rCOaQkiw";
+export const CHECKOUT_FORGEFIT_PROMOCIONAL = "https://pay.sunize.com.br/yAItIoVW";
+
+// Aliases mantidos apenas para compatibilidade com componentes durante a migração.
+export const CHECKOUT_SIMPLES = CHECKOUT_PACOTE_DIGITAL;
+export const CHECKOUT_COMPLETO = CHECKOUT_FORGEFIT;
+export const CHECKOUT_COMPLETO_DESCONTO = CHECKOUT_FORGEFIT_PROMOCIONAL;
