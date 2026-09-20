@@ -60,14 +60,13 @@ Criar seções compactas, mobile-first, para explicar visualmente:
 - Depoimentos, bônus, garantia e elementos de confiança serão reaproveitados quando continuarem coerentes.
 - Não serão criados novos entregáveis, resultados ou preços de concorrentes.
 
-## Dependências antes da conclusão
-São necessários:
-1. checkout do Pacote Completo Digital R$ 9,90;
-2. checkout normal do ForgeFit App R$ 19,90;
-3. checkout promocional do ForgeFit App R$ 15,90;
-4. capturas reais das telas do ForgeFit para os mockups solicitados.
+## Materiais recebidos
+- Checkout do Pacote Completo Digital R$ 9,90: `https://pay.sunize.com.br/uIQOAFXG#643fa065-1d6d-4073-83d8-ec29dbf797c8`
+- Checkout normal do ForgeFit App R$ 19,90: `https://pay.sunize.com.br/tmnfZDHS`
+- Checkout promocional do ForgeFit App R$ 15,90: `https://pay.sunize.com.br/yAItIoVW`
+- Três capturas reais do ForgeFit: painel, recomendação personalizada e detalhes das execuções.
 
-Até esses itens chegarem, nenhum link antigo será atribuído automaticamente ao novo produto e nenhuma tela fictícia será apresentada como real.
+Esses materiais serão usados nos mockups e nos respectivos fluxos, sem reaproveitar links antigos de forma incorreta.
 
 ## Verificação final
 - Buscar no projeto inteiro preços, nomes, “Pacote Simples”, “Desafio 24 Dias” e descrições antigas.
