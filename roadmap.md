@@ -5,3 +5,5 @@
 - [x] Connect and validate all three checkout links with UTM preservation
 - [x] Add the supplied real ForgeFit screenshots and verify desktop/mobile presentation
 - [x] Remove legacy offer names, prices, and 24-day app challenge references
+
+- [x] Replace ForgeFit visuals with the newly supplied screenshots, video, and logo
