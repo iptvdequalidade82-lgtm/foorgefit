@@ -28,7 +28,7 @@ const ITEMS = [
     photo: cliente4.url,
     name: "Rafael Souza",
     location: "Campinas / SP",
-    text: "O desafio de 24 dias me tirou da estagnação. Voltei a ter constância na rotina.",
+    text: "A organização dos treinos me tirou da estagnação. Voltei a ter constância na rotina.",
   },
 ];
 

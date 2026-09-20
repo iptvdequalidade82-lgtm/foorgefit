@@ -79,14 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "+200 Planilhas de Treino Prontas para o Seu Biotipo" },
-      { name: "description", content: "Mais de 200 planilhas de treino prontas, +275 GIFs explicativos, prescrição para 12 meses e 3 bônus exclusivos. Tudo por R$ 9,90." },
-      { name: "author", content: "Infocursos Brasil" },
-      { property: "og:title", content: "+200 Planilhas de Treino Prontas para o Seu Biotipo" },
-      { property: "og:description", content: "Mais de 200 planilhas de treino prontas, +275 GIFs explicativos, prescrição para 12 meses e 3 bônus exclusivos. Tudo por R$ 9,90." },
+      { title: "ForgeFit — Seu treino, do seu jeito" },
+      { name: "description", content: "Monte e organize sua rotina de treino no ForgeFit ou escolha o pacote completo de conteúdos digitais." },
+      { name: "author", content: "ForgeFit" },
+      { property: "og:title", content: "ForgeFit — Seu treino, do seu jeito" },
+      { property: "og:description", content: "Aplicativo de treinos com acesso vitalício e pacote completo de conteúdos digitais." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -129,7 +128,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
