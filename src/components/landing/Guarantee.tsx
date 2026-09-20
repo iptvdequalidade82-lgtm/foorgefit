@@ -14,7 +14,7 @@ export function Guarantee() {
             <p className="eyebrow text-primary">Sua compra sem risco</p>
             <h2 className="display-2 mt-3">Garantia de 7 dias sem complicação</h2>
             <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-white/70">
-              Você tem 7 dias após a compra para conhecer o material. Se entender que ele não é
+              Você tem 7 dias após a compra para conhecer o produto escolhido. Se entender que ele não é
               para você, basta solicitar o reembolso dentro desse prazo. Sem burocracia e sem
               complicação.
             </p>

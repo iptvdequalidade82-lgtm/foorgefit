@@ -4,9 +4,8 @@ import { trackViewContent } from "@/lib/pixel";
 
 
 import { Hero } from "@/components/landing/Hero";
-import { Intro } from "@/components/landing/Intro";
-import { Features } from "@/components/landing/Features";
-import { Bonus } from "@/components/landing/Bonus";
+import { AppExperience } from "@/components/landing/AppExperience";
+import { ExperienceChoice } from "@/components/landing/ExperienceChoice";
 import { Steps } from "@/components/landing/Steps";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Offer } from "@/components/landing/Offer";
@@ -15,10 +14,11 @@ import { Trust } from "@/components/landing/Trust";
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
 import { CtaButton } from "@/components/landing/CtaButton";
+import { MobileSticky } from "@/components/landing/MobileSticky";
 
-const TITLE = "+200 Planilhas de Treino Prontas para o Seu Biotipo";
+const TITLE = "ForgeFit — Seu treino, do seu jeito";
 const DESCRIPTION =
-  "Mais de 200 planilhas de treino prontas, +275 GIFs explicativos, prescrição para 12 meses e 3 bônus exclusivos. Tudo por R$ 9,90.";
+  "Escolha o pacote completo de conteúdos digitais ou monte sua rotina no ForgeFit App, com pagamento único e acesso vitalício.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,9 +47,8 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <Hero onCta={scrollToOffer} />
-      <Intro />
-      <Features />
-      <Bonus />
+      <AppExperience />
+      <ExperienceChoice />
       <Steps />
       <Testimonials />
       <Offer />
@@ -70,6 +69,7 @@ function Index() {
         </div>
       </section>
       <Footer />
+      <MobileSticky />
     </main>
   );
 }

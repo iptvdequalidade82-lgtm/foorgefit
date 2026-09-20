@@ -4,82 +4,50 @@ import { cn } from "@/lib/utils";
 
 const FAQS = [
   {
-    q: "O que vou receber?",
-    a: (
-      <div className="space-y-3">
-        <p>
-          Ao adquirir as planilhas de treino, você terá acesso a um conteúdo completo para
-          transformar seus resultados, incluindo:
-        </p>
-        <p>
-          +200 Planilhas de Treinos personalizadas para hipertrofia, emagrecimento, definição
-          muscular, resistência, mobilidade e flexibilidade.
-        </p>
-        <p>
-          Programas variados para iniciantes e avançados (ABC, ABCD, ABCDE, full body, HIIT, entre
-          outros).
-        </p>
-        <p>Prescrição de Treinos para 12 meses, garantindo evolução constante.</p>
-        <p>
-          +3 Bônus Exclusivos: 500 Receitas Low Carb, 300 Receitas Anabólicas e 100 Receitas
-          Saudáveis Fit.
-        </p>
-      </div>
-    ),
+    q: "O que é o ForgeFit?",
+    a: <p>O ForgeFit é um aplicativo para montar, organizar e consultar sua rotina de treinos.</p>,
   },
   {
-    q: "Como receberei o conteúdo?",
-    a: (
-      <div className="space-y-3">
-        <p>
-          Após a confirmação do pagamento, você receberá um e-mail com o link do Google Drive e as
-          instruções de acesso.
-        </p>
-        <p>
-          É só clicar no link, solicitar acesso ao drive e, assim que aceitarmos — ou
-          automaticamente, dependendo do pacote — você já poderá acessar todo o material.
-        </p>
-        <p>
-          Você pode usar no celular, tablet ou computador. No celular, recomendamos ter o app do
-          Google Drive instalado para facilitar ainda mais.
-        </p>
-      </div>
-    ),
+    q: "O ForgeFit tem mensalidade?",
+    a: <p>Não. O plano de R$ 19,90 possui pagamento único e acesso vitalício.</p>,
   },
   {
-    q: "Por quanto tempo poderei acessar o conteúdo?",
+    q: "Qual a diferença entre o pacote de R$ 9,90 e o ForgeFit?",
     a: (
       <p>
-        O acesso é vitalício! Uma vez que você compra, pode acessar sempre que precisar, sem limite
-        de tempo.
+        O pacote de R$ 9,90 reúne os conteúdos digitais da oferta. O ForgeFit é uma experiência
+        interativa em aplicativo, permitindo montar e organizar os próprios treinos, consultar
+        execuções, receitas e outras funções.
       </p>
     ),
   },
   {
-    q: "Posso acessar pelo celular?",
-    a: <p>Sim. O conteúdo foi pensado para ser acessado facilmente pelo celular.</p>,
+    q: "Consigo escolher meus exercícios?",
+    a: <p>Sim. Você escolhe os exercícios e pode alterar a ordem, séries, repetições e descanso.</p>,
   },
   {
-    q: "Os treinos são separados por grupos musculares?",
-    a: (
-      <p>
-        Sim. Os conteúdos são organizados para facilitar a localização dos diferentes tipos de
-        treino.
-      </p>
-    ),
+    q: "Consigo combinar diferentes músculos?",
+    a: <p>Sim. Você pode personalizar sua rotina de acordo com sua preferência.</p>,
   },
   {
-    q: "Posso começar a usar os treinos imediatamente?",
-    a: <p>Sim. Após receber o acesso, você já poderá consultar os conteúdos disponíveis.</p>,
+    q: "Consigo escolher os equipamentos?",
+    a: <p>Sim. Existem exercícios associados a diferentes tipos de equipamentos.</p>,
   },
   {
-    q: "É pagamento único?",
-    a: (
-      <p>
-        Sim. O acesso é adquirido através de um pagamento único de{" "}
-        <strong className="font-semibold text-foreground">R$ 9,90</strong>.
-      </p>
-    ),
+    q: "Os exercícios possuem explicação?",
+    a: <p>Sim. Existem mais de 300 execuções explicativas disponíveis no aplicativo.</p>,
+  },
+  {
+    q: "Tem receitas?",
+    a: <p>Sim. O ForgeFit possui opções de receitas para complementar sua rotina.</p>,
+  },
+  {
+    q: "Tem desafio?",
+    a: <p>Sim. O ForgeFit possui um desafio de 4 dias.</p>,
+  },
+  {
+    q: "Como recebo meu acesso?",
+    a: <p>Após a confirmação do pagamento, as instruções são enviadas para o e-mail cadastrado. Confira se digitou o endereço corretamente.</p>,
   },
 ];
 
@@ -89,8 +57,8 @@ export function Faq() {
   return (
     <section className="section-pad bg-background">
       <div className="container-page text-center">
-        <h2 className="display-2 stack-head ">Perguntas Frequentes</h2>
-        <p className="lead mx-auto mt-5 max-w-xl">Tire suas dúvidas sobre o produto</p>
+        <h2 className="display-2 stack-head">Perguntas frequentes</h2>
+        <p className="lead mx-auto mt-5 max-w-xl">Tudo o que você precisa saber antes de escolher.</p>
 
         <div className="mx-auto mt-14 max-w-2xl space-y-3 text-left">
           {FAQS.map((item, i) => {
@@ -98,13 +66,13 @@ export function Faq() {
             return (
               <div
                 key={item.q}
-                className="overflow-hidden rounded-xl border border-border bg-white/[0.03] shadow-[0_1px_2px_oklch(0.325_0.041_208/0.04)]"
+                className="overflow-hidden rounded-lg border border-border bg-white/[0.03]"
               >
                 <button
                   type="button"
                   aria-expanded={isOpen}
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-[0.95rem] font-bold tracking-[-0.01em] transition-colors duration-300 hover:text-primary"
+                  className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left font-display text-[0.95rem] font-bold transition-colors duration-300 hover:text-primary sm:px-6"
                 >
                   <span className="min-w-0">{item.q}</span>
                   <ChevronDown
