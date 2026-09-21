@@ -6,14 +6,6 @@ import { Reveal } from "./Reveal";
 import { CHECKOUT_FORGEFIT } from "@/lib/checkout";
 
 const DIGITAL_ITEMS = [
-  "+200 planilhas de treino",
-  "Guia Prático: Dominando a Fome",
-  "Fichas de treino",
-  "Emagrecimento Sem Dietas",
-  "Cardápio para comer fora sem sair da dieta",
-  "200 Receitas de Café da Manhã Nutritivas",
-  "80 Receitas de Refeições Saudáveis para Congelar",
-  "+200 Exercícios de Musculação Ilustrados em GIF",
   "500 Receitas Low Carb",
   "300 Receitas Anabólicas",
   "100 Receitas Saudáveis Fit",
