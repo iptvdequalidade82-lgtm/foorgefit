@@ -68,7 +68,7 @@ function OfertaEspecial() {
             <h2 className="display-3 mt-3">Pacote Digital</h2>
             <p className="mt-5 font-display text-4xl font-extrabold">R$ 9,90</p>
             <div className="mt-6 space-y-3 text-sm text-muted-foreground">
-              {["Materiais prontos", "Planilhas e GIFs", "Receitas e bônus", "Acesso pelo Google Drive"].map((item) => (
+              {["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"].map((item) => (
                 <p key={item} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> {item}</p>
               ))}
             </div>
