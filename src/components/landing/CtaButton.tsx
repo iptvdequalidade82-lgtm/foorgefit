@@ -44,7 +44,7 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
         rel="noopener noreferrer"
         className={classes}
         onClick={() => {
-          trackInitiateCheckout();
+          trackInitiateCheckout(href);
           onClick?.();
         }}
       >

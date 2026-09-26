@@ -44,7 +44,7 @@ function OfertaEspecial() {
   const pacoteHref = useTrackedUrl(CHECKOUT_PACOTE_DIGITAL);
 
   useEffect(() => {
-    trackViewContent();
+    trackViewContent("promo");
   }, []);
 
   return (
@@ -98,7 +98,7 @@ function OfertaEspecial() {
         </div>
 
         <div className="mx-auto mt-5 max-w-3xl">
-          <a href={pacoteHref} target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout()} className="tap inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-3 text-center font-display text-xs font-extrabold uppercase text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground sm:text-sm">
+          <a href={pacoteHref} target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout(CHECKOUT_PACOTE_DIGITAL)} className="tap inline-flex min-h-13 w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-3 text-center font-display text-xs font-extrabold uppercase text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground sm:text-sm">
             NÃO, QUERO CONTINUAR COM O PACOTE DE R$ 9,90 <ArrowRight className="h-4 w-4 shrink-0" />
           </a>
           <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-semibold text-muted-foreground">

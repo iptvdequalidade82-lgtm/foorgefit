@@ -7,3 +7,4 @@
 - [x] Remove legacy offer names, prices, and 24-day app challenge references
 
 - [x] Replace ForgeFit visuals with the newly supplied screenshots, video, and logo
+- [x] Verify Meta Pixel on every site page and track internal page navigation and each checkout choice
