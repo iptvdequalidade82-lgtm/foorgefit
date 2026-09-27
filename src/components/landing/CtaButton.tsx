@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
-import { trackInitiateCheckout } from "@/lib/pixel";
+import { trackAddToCart, trackInitiateCheckout } from "@/lib/pixel";
 import { useTrackedUrl, useTrackingParams } from "@/hooks/use-tracking-params";
 
 
@@ -44,6 +44,7 @@ export function CtaButton({ children, className, variant = "primary", href, to, 
         rel="noopener noreferrer"
         className={classes}
         onClick={() => {
+          trackAddToCart(href);
           trackInitiateCheckout(href);
           onClick?.();
         }}

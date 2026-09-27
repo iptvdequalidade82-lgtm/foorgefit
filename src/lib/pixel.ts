@@ -48,9 +48,14 @@ export function trackPageView() {
   track("PageView");
 }
 
-export function trackInitiateCheckout(checkoutUrl: string) {
+export function trackAddToCart(checkoutUrl: string) {
   const product = productForCheckout(checkoutUrl);
   if (!product) return;
   track("AddToCart", product);
+}
+
+export function trackInitiateCheckout(checkoutUrl: string) {
+  const product = productForCheckout(checkoutUrl);
+  if (!product) return;
   track("InitiateCheckout", { ...product, num_items: 1 });
 }
