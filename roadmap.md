@@ -8,3 +8,5 @@
 
 - [x] Replace ForgeFit visuals with the newly supplied screenshots, video, and logo
 - [x] Verify Meta Pixel on every site page and track internal page navigation and each checkout choice
+- [x] Verify PageView, AddToCart, and InitiateCheckout triggers across the purchase journey
+- [ ] Confirm Purchase delivery after a real paid order (requires Sunize transaction/confirmation access)

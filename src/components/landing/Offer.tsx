@@ -4,6 +4,8 @@ import dashboardImage from "@/assets/forgefit-dashboard.png.asset.json";
 import { CtaButton } from "./CtaButton";
 import { Reveal } from "./Reveal";
 import { CHECKOUT_FORGEFIT } from "@/lib/checkout";
+import { CHECKOUT_PACOTE_DIGITAL } from "@/lib/checkout";
+import { trackAddToCart } from "@/lib/pixel";
 
 const DIGITAL_ITEMS = [
   "500 Receitas Low Carb",
@@ -51,7 +53,7 @@ export function Offer() {
               Materiais prontos para consultar. <strong className="text-foreground">Não inclui acesso ao ForgeFit App.</strong>
             </div>
             <ul className="mt-6 space-y-3">{DIGITAL_ITEMS.map((item) => <OfferItem key={item}>{item}</OfferItem>)}</ul>
-            <CtaButton to="/oferta-especial" className="mt-8">QUERO O PACOTE DE R$ 9,90</CtaButton>
+            <CtaButton to="/oferta-especial" onClick={() => trackAddToCart(CHECKOUT_PACOTE_DIGITAL)} className="mt-8">QUERO O PACOTE DE R$ 9,90</CtaButton>
             <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground"><Mail className="h-4 w-4 text-primary" /> Acesso aos materiais enviado por e-mail.</p>
           </Reveal>
 
