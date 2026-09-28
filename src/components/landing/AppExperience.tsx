@@ -70,7 +70,7 @@ export function AppExperience() {
                 controls
                 playsInline
                 preload="metadata"
-                className="aspect-[9/16] w-full bg-background object-cover"
+                className="block h-auto w-full bg-background object-contain"
                 aria-label="Demonstração em vídeo do aplicativo ForgeFit"
               />
             </div>
