@@ -8,6 +8,9 @@ import { CHECKOUT_PACOTE_DIGITAL } from "@/lib/checkout";
 import { trackAddToCart } from "@/lib/pixel";
 
 const DIGITAL_ITEMS = [
+  "Planilhas de treino para consultar",
+  "GIFs demonstrando os exercícios",
+  "Guias e bônus digitais",
   "500 Receitas Low Carb",
   "300 Receitas Anabólicas",
   "100 Receitas Saudáveis Fit",
@@ -50,7 +53,7 @@ export function Offer() {
             <p className="mt-6 font-display text-5xl font-extrabold">R$ 9,90</p>
             <p className="mt-2 text-xs font-semibold uppercase text-muted-foreground">Pagamento único</p>
             <div className="mt-5 rounded-lg border border-border bg-white/[0.03] p-4 text-sm text-foreground/75">
-              Materiais prontos para consultar. <strong className="text-foreground">Não inclui acesso ao ForgeFit App.</strong>
+              Treinos e materiais prontos para consultar. <strong className="text-foreground">Não inclui acesso ao ForgeFit App.</strong>
             </div>
             <ul className="mt-6 space-y-3">{DIGITAL_ITEMS.map((item) => <OfferItem key={item}>{item}</OfferItem>)}</ul>
             <CtaButton to="/oferta-especial" onClick={() => trackAddToCart(CHECKOUT_PACOTE_DIGITAL)} className="mt-8">QUERO O PACOTE DE R$ 9,90</CtaButton>

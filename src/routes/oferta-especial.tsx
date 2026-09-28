@@ -12,7 +12,7 @@ import { CHECKOUT_FORGEFIT_PROMOCIONAL, CHECKOUT_PACOTE_DIGITAL } from "@/lib/ch
 import { useTrackedUrl } from "@/hooks/use-tracking-params";
 
 const TITLE = "Oferta exclusiva ForgeFit";
-const DESCRIPTION = "Transforme seu pacote em um aplicativo completo por apenas R$ 6 a mais.";
+const DESCRIPTION = "Escolha o ForgeFit App por R$ 15,90, apenas R$ 6 acima do pacote digital.";
 
 export const Route = createFileRoute("/oferta-especial")({
   head: () => ({
@@ -58,8 +58,8 @@ function OfertaEspecial() {
         </a>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow text-primary">Antes de continuar...</p>
-          <h1 className="display-2 mt-4">Por apenas R$ 6 a mais, você pode levar o ForgeFit App.</h1>
-          <p className="lead mx-auto mt-5 max-w-2xl">Transforme seu pacote em um app completo para montar, organizar e acompanhar seus treinos.</p>
+          <h1 className="display-2 mt-4">Por R$ 6 a mais, escolha o ForgeFit App.</h1>
+          <p className="lead mx-auto mt-5 max-w-2xl">Em vez do pacote digital de R$ 9,90, você pode levar o aplicativo por R$ 15,90 para montar e organizar seus treinos.</p>
         </Reveal>
 
         <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-[0.8fr_1.2fr]">
@@ -68,7 +68,7 @@ function OfertaEspecial() {
             <h2 className="display-3 mt-3">Pacote Digital</h2>
             <p className="mt-5 font-display text-4xl font-extrabold">R$ 9,90</p>
             <div className="mt-6 space-y-3 text-sm text-muted-foreground">
-              {["500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"].map((item) => (
+              {["Planilhas de treino", "GIFs demonstrando os exercícios", "Guias e bônus digitais", "500 Receitas Low Carb", "300 Receitas Anabólicas", "100 Receitas Saudáveis Fit"].map((item) => (
                 <p key={item} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> {item}</p>
               ))}
             </div>
@@ -94,6 +94,7 @@ function OfertaEspecial() {
               {APP_ITEMS.map((item) => <li key={item} className="flex items-start gap-2 text-sm text-foreground/80"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />{item}</li>)}
             </ul>
             <CtaButton href={CHECKOUT_FORGEFIT_PROMOCIONAL} className="mt-7">SIM, QUERO O FORGEFIT POR R$ 15,90</CtaButton>
+            <p className="mt-3 text-center text-xs text-muted-foreground">Você paga apenas R$ 15,90 nesta compra; o pacote de R$ 9,90 não é cobrado junto.</p>
           </Reveal>
         </div>
 

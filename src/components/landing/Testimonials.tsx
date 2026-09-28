@@ -38,7 +38,7 @@ export function Testimonials() {
       <div className="container-page text-center">
         <Reveal>
           <h2 className="display-2 stack-head">
-            Quem Fez, <span className="text-primary">Se SUPEROU!</span>
+            O que dizem sobre <span className="text-primary">os materiais</span>
           </h2>
         </Reveal>
 

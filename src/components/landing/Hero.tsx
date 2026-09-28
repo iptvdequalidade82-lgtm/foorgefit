@@ -26,18 +26,19 @@ export function Hero({ onCta }: { onCta: () => void }) {
             <p className="eyebrow text-primary">Treino digital, do seu jeito</p>
             <h1 className="display-1 mt-5">Seu treino.<br /><span className="text-primary">Do seu jeito.</span></h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:mx-0">
-              Escolha entre o pacote completo de conteúdos ou tenha acesso ao ForgeFit, o aplicativo onde você monta sua própria rotina de treino.
+              Escolha os materiais digitais para consultar ou o ForgeFit App para montar e organizar sua própria rotina de treino.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:justify-start">
               <Button onClick={scrollToApp} size="lg" className="h-14 rounded-lg px-7 font-display font-extrabold">
                 CONHECER O FORGEFIT <ArrowRight className="h-4 w-4" />
               </Button>
               <Button onClick={onCta} size="lg" variant="outline" className="h-14 rounded-lg px-7 font-display font-extrabold">
-                VER OPÇÕES <ArrowDown className="h-4 w-4" />
+                VER PLANOS <ArrowDown className="h-4 w-4" />
               </Button>
             </div>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-semibold text-muted-foreground lg:justify-start">
-              <span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Planos a partir de R$ 9,90</span>
+              <span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Pacote digital: R$ 9,90</span>
+              <span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> ForgeFit App: R$ 19,90</span>
               <span className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Pagamento único</span>
             </div>
           </Reveal>
